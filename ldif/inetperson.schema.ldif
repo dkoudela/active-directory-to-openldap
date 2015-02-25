@@ -1,0 +1,51 @@
+dn: cn={5}inetorgperson,cn=schema,cn=config
+changetype: modify
+add: olcAttributeTypes
+olcAttributeTypes: ( 1.2.840.113556.1.2.210 NAME 'proxyAddresses' DESC 'rfc822 mail address of group member(s)' EQUALITY caseIgnoreIA5Match SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 )
+
+dn: cn={5}inetorgperson,cn=schema,cn=config
+changetype: modify
+add: olcAttributeTypes
+olcAttributeTypes: ( 1.1.2.1.1 NAME 'department'
+        DESC 'Department Name'
+        EQUALITY caseIgnoreMatch
+        SUBSTR caseIgnoreSubstringsMatch
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE )
+
+dn: cn={5}inetorgperson,cn=schema,cn=config
+changetype: modify
+add: olcAttributeTypes
+olcAttributeTypes: ( 1.1.2.1.2 NAME 'company'
+        DESC 'Company Name'
+        EQUALITY caseIgnoreMatch
+        SUBSTR caseIgnoreSubstringsMatch
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE )
+
+dn: cn={5}inetorgperson,cn=schema,cn=config
+changetype: modify
+add: olcAttributeTypes
+olcAttributeTypes: ( 1.2.840.113556.1.2.447 NAME 'mailNickname'
+        DESC 'MS Exchange alias'
+        EQUALITY caseIgnoreMatch
+        SUBSTR caseIgnoreSubstringsMatch
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 )
+
+dn: cn={5}inetorgperson,cn=schema,cn=config
+changetype: modify
+delete: olcObjectClasses
+olcObjectClasses: ( 2.16.840.1.113730.3.2.2 NAME 'inetOrgPerson' DESC 'RFC2798: Internet Organizational Person' SUP organizationalPerson STRUCTURAL MAY ( audio $ businessCategory $ carLicense $ departmentNumber $ displayName $ employeeNumber $ employeeType $ givenName $ homePhone $ homePostalAddress $ initials $ jpegPhoto $ labeledURI $ mail $ manager $ mobile $ o $ pager $ photo $ roomNumber $ secretary $ uid $ userCertificate $ x500uniqueIdentifier $ preferredLanguage $ userSMIMECertificate $ userPKCS12 ) )
+
+dn: cn={5}inetorgperson,cn=schema,cn=config
+changetype: modify
+add: olcObjectClasses
+olcObjectClasses: ( 2.16.840.1.113730.3.2.2 NAME 'inetOrgPerson' DESC 'RFC2
+ 798: Internet Organizational Person' SUP organizationalPerson STRUCTURAL MAY 
+ ( audio $ businessCategory $ carLicense $ departmentNumber $ displayName $ 
+ employeeNumber $ employeeType $ givenName $ homePhone $ homePostalAddress $ 
+ initials $ jpegPhoto $ labeledURI $ mail $ manager $ mobile $ o $ pager $ 
+ photo $ roomNumber $ secretary $ uid $ userCertificate $ x500uniqueIdentifier 
+ $ preferredLanguage $ userSMIMECertificate $ userPKCS12 $ proxyAddresses $ 
+ department $ company $ mailNickname ) )
+
