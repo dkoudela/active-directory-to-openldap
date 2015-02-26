@@ -1,13 +1,13 @@
 #!/bin/bash
 
-SLAPDENV=`dirname $0`/../slapdenv.config
+SLAPDENV=`dirname $0`/../config/slapdenv.config
 D=`dirname $0`/..
-DATALDIFS="*.ldif"
+DATALDIFS="${D}/ldif/*.ldif"
 
 source ${SLAPDENV}
 
 for DATALDIF in ${DATALDIFS};
 do
-  ldapadd -D "cn=Manager,${ROOTDN}" -y ${D}/passwdfile.conf -f ${D}/ldif/${DATALDIF}
+  ldapadd -D "cn=Manager,${ROOTDN}" -y ${D}/passwdfile.conf -f ${DATALDIF}
 done
 

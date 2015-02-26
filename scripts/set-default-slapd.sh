@@ -1,14 +1,17 @@
 #!/bin/bash
 
-SLAPDCONF=`dirname $0`/../slapd.conf
-SCHEMADIRREL=`dirname $0`/../schema
+D=`dirname $0`/..
+SLAPDCONFTEMPLATE=${D}/config/slapd.conf.template
+DBCONFIG=${D}/config/DB_CONFIG
+SLAPDCONF=${D}/slapd.conf
+SCHEMADIRREL=${D}/schema
 SCHEMADIR=`readlink -f $SCHEMADIRREL`
-SLAPDENV=`dirname $0`/../slapdenv.config
-PASSWDFILE=`dirname $0`/../passwdfile.conf
+SLAPDENV=${D}/config/slapdenv.config
+PASSWDFILE=${D}/passwdfile.conf
 
 # Generate config files from templates
 source ${SLAPDENV}
-sed "s/dc=example,dc=com/$ROOTDN/g;s|__SCHEMADIR__|$SCHEMADIR|g;s/^rootpw.*$/rootpw	$ROOTPW/g" ${SLAPDCONF}.template >$SLAPDCONF
+sed "s/dc=example,dc=com/$ROOTDN/g;s|__SCHEMADIR__|$SCHEMADIR|g;s/^rootpw.*$/rootpw	$ROOTPW/g" ${SLAPDCONFTEMPLATE} >${SLAPDCONF}
 printf "${ROOTPW}" > ${PASSWDFILE}
 
 DATABASEDIR=`sed -n 's/^directory[ \t]*\(.*\)/\1/p' ${SLAPDCONF} `
@@ -18,7 +21,7 @@ service slapd stop
 
 # Clean the LDAP database
 rm -f ${DATABASEDIR}/*
-cp `dirname $0`/../DB_CONFIG ${DATABASEDIR}
+cp ${DBCONFIG} ${DATABASEDIR}
 slapd
 killall `which slapd`
 sudo chown -R ldap:ldap ${DATABASEDIR}
