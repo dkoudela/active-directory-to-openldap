@@ -3,18 +3,21 @@
 # This file should NOT be world readable.
 #
 
-include		/etc/openldap/schema/corba.schema
-include		/etc/openldap/schema/core.schema
-include		/etc/openldap/schema/cosine.schema
-include		/etc/openldap/schema/duaconf.schema
-include		/etc/openldap/schema/dyngroup.schema
-include		/etc/openldap/schema/inetorgperson.schema
-include		/etc/openldap/schema/java.schema
-include		/etc/openldap/schema/misc.schema
-include		/etc/openldap/schema/nis.schema
-include		/etc/openldap/schema/openldap.schema
-include		/etc/openldap/schema/ppolicy.schema
-include		/etc/openldap/schema/collective.schema
+include		__SCHEMADIR__/microsoftattributetype.schema
+include		__SCHEMADIR__/corba.schema
+include		__SCHEMADIR__/core.schema
+include		__SCHEMADIR__/cosine.schema
+include		__SCHEMADIR__/duaconf.schema
+include		__SCHEMADIR__/dyngroup.schema
+include		__SCHEMADIR__/inetorgperson.schema
+include		__SCHEMADIR__/java.schema
+include		__SCHEMADIR__/misc.schema
+include		__SCHEMADIR__/nis.schema
+include		__SCHEMADIR__/openldap.schema
+include		__SCHEMADIR__/ppolicy.schema
+include		__SCHEMADIR__/collective.schema
+include		__SCHEMADIR__/microsoftobjectclass.schema
+
 
 # Allow LDAPv2 client connections.  This is NOT the default.
 allow bind_v2

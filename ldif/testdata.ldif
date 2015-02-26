@@ -1,0 +1,10 @@
+dn: dc=example,dc=com
+objectClass: top
+objectClass: domain
+objectClass: domainDNS
+
+dn: ou=My Company Users,dc=example,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: My Company Users 
+

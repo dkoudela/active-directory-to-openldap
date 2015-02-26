@@ -1,6 +1,16 @@
 #!/bin/bash
 
 SLAPDCONF=`dirname $0`/../slapd.conf
+SCHEMADIRREL=`dirname $0`/../schema
+SCHEMADIR=`readlink -f $SCHEMADIRREL`
+SLAPDENV=`dirname $0`/../slapdenv.config
+PASSWDFILE=`dirname $0`/../passwdfile.conf
+
+# Generate config files from templates
+source ${SLAPDENV}
+sed "s/dc=example,dc=com/$ROOTDN/g;s|__SCHEMADIR__|$SCHEMADIR|g;s/^rootpw.*$/rootpw	$ROOTPW/g" ${SLAPDCONF}.template >$SLAPDCONF
+printf "${ROOTPW}" > ${PASSWDFILE}
+
 DATABASEDIR=`sed -n 's/^directory[ \t]*\(.*\)/\1/p' ${SLAPDCONF} `
 
 # Stop the LDAP service
