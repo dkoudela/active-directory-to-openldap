@@ -1,3 +1,31 @@
+#objectclass ( 2.5.6.0
+#        NAME 'top'
+#        ABSTRACT
+#        MUST (objectClass $ instanceType $ nTSecurityDescriptor $
+#                objectCategory )
+#        MAY (cn $ description $ distinguishedName $ whenCreated $
+#                whenChanged $ subRefs $ displayName $ uSNCreated $ isDeleted $
+#                dSASignature $ objectVersion $ repsTo $ repsFrom $ memberOf $
+#                uSNChanged $ uSNLastObjRem $ showInAdvancedViewOnly $
+#                adminDisplayName $ proxyAddresses $ adminDescription $
+#                extensionName $ uSNDSALastObjRemoved $ displayNamePrintable $
+#                directReports $ wWWHomePage $ USNIntersite $ name $ objectGUID $
+#                replPropertyMetaData $ replUpToDateVector $ flags $ revision $
+#                wbemPath $ fSMORoleOwner $ systemFlags $ siteObjectBL $
+#                serverReferenceBL $ nonSecurityMemberBL $ queryPolicyBL $
+#                wellKnownObjects $ isPrivilegeHolder $ partialAttributeSet $
+#                managedObjects $ partialAttributeDeletionList $ url $
+#                lastKnownParent $ bridgeheadServerListBL $ netbootSCPBL $
+#                isCriticalSystemObject $ frsComputerReferenceBL $
+#                fRSMemberReferenceBL $ uSNSource $ fromEntry $
+#                allowedChildClasses $ allowedChildClassesEffective $
+#                allowedAttributes $ allowedAttributesEffective $
+#                possibleInferiors $ canonicalName $ proxiedObjectName $
+#                sDRightsEffective $ dSCorePropagationData $
+#                otherWellKnownObjects $ mS-DS-ConsistencyGuid $
+#                mS-DS-ConsistencyChildCount $ masteredBy $ createTimeStamp $
+#                modifyTimeStamp $ subSchemaSubEntry ) )
+#
 objectclass ( 1.2.840.113556.1.5.67
         NAME 'domainDNS'
         SUP domain
