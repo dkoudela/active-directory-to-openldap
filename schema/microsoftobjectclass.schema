@@ -1,0 +1,7 @@
+objectclass ( 1.2.840.113556.1.5.67
+        NAME 'domainDNS'
+        SUP domain
+        STRUCTURAL
+        MAY (managedBy ) )
+
+

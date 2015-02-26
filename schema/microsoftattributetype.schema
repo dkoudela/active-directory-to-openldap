@@ -1,0 +1,30 @@
+attributetype ( 1.2.840.113556.1.2.447 NAME 'mailNickname'
+        DESC 'MS Exchange alias'
+        EQUALITY caseIgnoreMatch
+        SUBSTR caseIgnoreSubstringsMatch
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 )
+
+attributetype ( 1.2.840.113556.1.2.210 NAME 'proxyAddresses'
+        DESC 'rfc822 mail address of group member(s)'
+        EQUALITY caseIgnoreIA5Match
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 )
+        
+attributetype ( 1.1.2.1.1 NAME 'department'
+        DESC 'Department Name'
+        EQUALITY caseIgnoreMatch
+        SUBSTR caseIgnoreSubstringsMatch
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE )
+
+attributetype ( 1.1.2.1.2 NAME 'company'
+        DESC 'Company Name'
+        EQUALITY caseIgnoreMatch
+        SUBSTR caseIgnoreSubstringsMatch
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.653
+        NAME 'managedBy'
+        SYNTAX '1.3.6.1.4.1.1466.115.121.1.12'
+        SINGLE-VALUE )
+
