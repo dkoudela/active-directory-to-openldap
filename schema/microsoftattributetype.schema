@@ -4,6 +4,194 @@ attributetype ( 1.2.840.113556.1.2.447 NAME 'mailNickname'
         SUBSTR caseIgnoreSubstringsMatch
         SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 )
 
+attributetype ( 1.2.840.113556.1.2.171 NAME 'homeMTA'
+        DESC 'homeMTA'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.12 )
+
+attributetype ( 1.2.840.113556.1.2.244 NAME 'homeMDB'
+        DESC 'homeMDB'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.12 )
+
+attributetype ( 1.2.840.113556.1.2.309 NAME 'mDBUseDefaults'
+        DESC 'mDBUseDefaults'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+        SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.2.423 NAME 'extensionAttribute1'
+        DESC 'extensionAttribute1'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.2.528 NAME 'protocolSettings'
+        DESC 'protocolSettings'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        )
+
+attributetype ( 1.2.840.113556.1.2.551 NAME 'internetEncoding'
+        DESC 'internetEncoding'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.1696 NAME 'lastLogonTimestamp'
+        DESC 'lastLogonTimestamp'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.47 NAME 'msExchHomeServerName'
+        DESC 'msExchHomeServerName'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.80 NAME 'msExchMailboxSecurityDescriptor'
+        DESC 'msExchMailboxSecurityDescriptor'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.40
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.101 NAME 'msExchUserAccountControl'
+        DESC 'msExchUserAccountControl'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.11058 NAME 'msExchMailboxGuid'
+        DESC 'msExchMailboxGuid'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.40
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50050 NAME 'msExchPoliciesIncluded'
+        DESC 'msExchPoliciesIncluded'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50341 NAME 'msExchUMDtmfMap'
+        DESC 'msExchUMDtmfMap'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50413 NAME 'msExchMDBRulesQuota'
+        DESC 'msExchMDBRulesQuota'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50730 NAME 'msExchRecipientDisplayType'
+        DESC 'msExchRecipientDisplayType'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50773 NAME 'msExchUserCulture'
+        DESC 'msExchUserCulture'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50853 NAME 'msExchVersion'
+        DESC 'msExchVersion'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50855 NAME 'msExchRecipientTypeDetails'
+        DESC 'msExchRecipientTypeDetails'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50905 NAME 'msExchUMEnabledFlags2'
+        DESC 'msExchUMEnabledFlags2'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50972 NAME 'msExchModerationFlags'
+        DESC 'msExchModerationFlags'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51025 NAME 'msExchTransportRecipientSettingsFlags'
+        DESC 'msExchTransportRecipientSettingsFlags'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51143 NAME 'msExchProvisioningFlags'
+        DESC 'msExchProvisioningFlags'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51383 NAME 'msExchTextMessagingState'
+        DESC 'msExchTextMessagingState'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51429 NAME 'msExchRBACPolicyLink'
+        DESC 'msExchRBACPolicyLink'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51442 NAME 'msExchArchiveQuota'
+        DESC 'msExchArchiveQuota'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51493 NAME 'msExchArchiveWarnQuota'
+        DESC 'msExchArchiveWarnQuota'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51508 NAME 'msExchDumpsterQuota'
+        DESC 'msExchDumpsterQuota'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51509 NAME 'msExchDumpsterWarningQuota'
+        DESC 'msExchDumpsterWarningQuota'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51580 NAME 'msExchWhenMailboxCreated'
+        DESC 'msExchWhenMailboxCreated'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51671 NAME 'msExchMailboxAuditEnable'
+        DESC 'msExchMailboxAuditEnable'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51672 NAME 'msExchMailboxAuditLogAgeLimit'
+        DESC 'msExchMailboxAuditLogAgeLimit'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51678 NAME 'msExchBypassAudit'
+        DESC 'msExchBypassAudit'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51733 NAME 'msExchAddressBookFlags'
+        DESC 'msExchAddressBookFlags'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
 #---
 
 attributetype ( 1.2.840.113556.1.4.856

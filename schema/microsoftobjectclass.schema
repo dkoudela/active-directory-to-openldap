@@ -39,3 +39,29 @@ objectclass ( 1.2.840.113556.1.5.67
 
 #---
 
+objectclass ( 1.2.840.113556.1.5.9
+        NAME 'user'
+        SUP organizationalPerson
+        STRUCTURAL
+        MAY (userCertificate $ networkAddress $ userAccountControl $
+                badPwdCount $ codePage $ homeDirectory $ homeDrive $
+                badPasswordTime $ lastLogoff $ lastLogon $ dBCSPwd $
+                localeID $ scriptPath $ logonHours $ logonWorkstation $
+                maxStorage $ userWorkstations $ unicodePwd $
+                otherLoginWorkstations $ ntPwdHistory $ pwdLastSet $
+                preferredOU $ primaryGroupID $ userParameters $
+                profilePath $ operatorCount $ adminCount $ accountExpires $
+                lmPwdHistory $ groupMembershipSAM $ logonCount $
+                controlAccessRights $ defaultClassStore $ groupsToIgnore $
+                groupPriority $ desktopProfile $ dynamicLDAPServer $
+                userPrincipalName $ lockoutTime $ userSharedFolder $
+                userSharedFolderOther $ servicePrincipalName $
+                aCSPolicyName $ terminalServer $ mSMQSignCertificates $
+                mSMQDigests $ mSMQDigestsMig $ mSMQSignCertificatesMig $
+                msNPAllowDialin $ msNPCallingStationID $
+                msNPSavedCallingStationID $ msRADIUSCallbackNumber $
+                msRADIUSFramedIPAddress $ msRADIUSFramedRoute $
+                msRADIUSServiceType $ msRASSavedCallbackNumber $
+                msRASSavedFramedIPAddress $ msRASSavedFramedRoute $
+                mS-DS-CreatorSID ) )
+
