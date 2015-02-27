@@ -4,6 +4,7 @@
 #
 
 include		__SCHEMADIR__/microsoftattributetype.schema
+include		__SCHEMADIR__/microsoftattributetypestd.schema
 include		__SCHEMADIR__/corba.schema
 include		__SCHEMADIR__/core.schema
 include		__SCHEMADIR__/cosine.schema

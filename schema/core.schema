@@ -426,8 +426,9 @@ objectclass ( 2.5.6.4 NAME 'organization'
 		facsimileTelephoneNumber $ street $ postOfficeBox $ postalCode $
 		postalAddress $ physicalDeliveryOfficeName $ st $ l $ description ) )
 
+# 2.5.6.5 NAME 'organizationalUnit' Mixed: OpenLdap + Microsoft
 objectclass ( 2.5.6.5 NAME 'organizationalUnit'
-	DESC 'RFC2256: an organizational unit'
+	DESC 'RFC2256: an organizational unit + Microsoft hacks'
 	SUP top STRUCTURAL
 	MUST ou
 	MAY ( userPassword $ searchGuide $ seeAlso $ businessCategory $
@@ -435,7 +436,10 @@ objectclass ( 2.5.6.5 NAME 'organizationalUnit'
 		preferredDeliveryMethod $ telexNumber $ teletexTerminalIdentifier $
 		telephoneNumber $ internationaliSDNNumber $
 		facsimileTelephoneNumber $ street $ postOfficeBox $ postalCode $
-		postalAddress $ physicalDeliveryOfficeName $ st $ l $ description ) )
+		postalAddress $ physicalDeliveryOfficeName $ st $ l $ description $
+        c $ internationalISDNNumber $ co $ countryCode $ desktopProfile $
+        defaultGroup $ managedBy $ uPNSuffixes $ gPLink $ gPOptions $ thumbnailLogo
+        ) )
 
 objectclass ( 2.5.6.6 NAME 'person'
 	DESC 'RFC2256: a person'
