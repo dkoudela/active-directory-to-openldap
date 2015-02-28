@@ -192,6 +192,29 @@ attributetype ( 1.2.840.113556.1.4.7000.102.51733 NAME 'msExchAddressBookFlags'
         SINGLE-VALUE
         )
 
+attributetype ( 1.2.840.113556.1.4.1710 NAME 'msDS-AllowedDNSSuffixes'
+        DESC 'msDS-AllowedDNSSuffixes'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50765 NAME 'msExchSafeSendersHash'
+        DESC 'msExchSafeSendersHash'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.40
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50858 NAME 'msExchMobileMailboxFlags'
+        DESC 'msExchMobileMailboxFlags'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51757 NAME 'msExchObjectsDeletedThisPeriod'
+        DESC 'msExchObjectsDeletedThisPeriod'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
 #---
 
 attributetype ( 1.2.840.113556.1.4.856

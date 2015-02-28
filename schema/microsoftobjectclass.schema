@@ -35,7 +35,7 @@ objectclass ( 1.2.840.113556.1.5.67
         NAME 'domainDNS'
         SUP domain
         STRUCTURAL
-        MAY (managedBy ) )
+        MAY (managedBy $ msDS-AllowedDNSSuffixes) )
 
 #---
 
@@ -63,5 +63,42 @@ objectclass ( 1.2.840.113556.1.5.9
                 msRADIUSFramedIPAddress $ msRADIUSFramedRoute $
                 msRADIUSServiceType $ msRASSavedCallbackNumber $
                 msRASSavedFramedIPAddress $ msRASSavedFramedRoute $
-                mS-DS-CreatorSID ) )
+                mS-DS-CreatorSID 
+             ) )
+
+#---
+
+# Custom user objectclass containing all Microsoft attributes 
+# used by Active Directory user
+objectclass ( 1.2.840.113556.1.5.9.666
+        NAME 'customActiveDirectoryUser'
+        SUP user
+        STRUCTURAL
+        MUST (homeMTA $ homeMDB $ garbageCollPeriod $ mDBUseDefaults $
+                extensionAttribute1 $ protocolSettings $ internetEncoding $
+                objectSid $ sAMAccountName $ sAMAccountType $ showInAddressBook $
+                legacyExchangeDN $ lastLogonTimestamp $ textEncodedORAddress $
+                msExchHomeServerName $ msExchMailboxSecurityDescriptor $
+                msExchUserAccountControl $ msExchMailboxGuid $ 
+                msExchPoliciesIncluded $ msExchUMDtmfMap $ msExchMDBRulesQuota $
+                msExchRecipientDisplayType $ msExchUserCulture $ msExchVersion $
+                msExchRecipientTypeDetails $ msExchUMEnabledFlags2 $
+                msExchModerationFlags $ msExchTransportRecipientSettingsFlags $
+                msExchProvisioningFlags $ msExchTextMessagingState $
+                msExchRBACPolicyLink $ msExchArchiveQuota $ msExchArchiveWarnQuota $
+                msExchDumpsterQuota $ msExchDumpsterWarningQuota $ msExchWhenMailboxCreated $
+                msExchMailboxAuditEnable $ msExchMailboxAuditLogAgeLimit $ msExchBypassAudit $
+                msExchAddressBookFlags
+            ) 
+        MAY (msExchSafeSendersHash $ msExchMobileMailboxFlags $ msExchObjectsDeletedThisPeriod
+            ) )
+
+# Support for ExchangeActiveSyncDevices entries (sub-entry of customActiveDirectoryUser/user)
+objectclass ( 666.666.666.666.666.666.1
+        NAME 'exchangeActiveSyncDevices'
+        SUP top
+        STRUCTURAL
+        MUST (msExchVersion
+             ) )
+
 

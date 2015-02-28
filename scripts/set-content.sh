@@ -9,6 +9,7 @@ source ${SLAPDENV}
 for DATALDIF in ${DATALDIFS};
 do
   sed 's/^objectClass: top/objectClass: mstop/g' ${DATALDIF} >${DATALDIF}.tmp
+  sed -i 's/^objectClass: user/objectClass: customActiveDirectoryUser/g' ${DATALDIF}.tmp
   ldapadd -D "cn=Manager,${ROOTDN}" -y ${D}/passwdfile.conf -f ${DATALDIF}.tmp
   rm -f ${DATALDIF}.tmp
 done
