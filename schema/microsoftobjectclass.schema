@@ -90,7 +90,8 @@ objectclass ( 666.666.666.666.666.666.2
                 msExchMailboxAuditEnable $ msExchMailboxAuditLogAgeLimit $ msExchBypassAudit $
                 msExchAddressBookFlags
             ) 
-        MAY (msExchSafeSendersHash $ msExchMobileMailboxFlags $ msExchObjectsDeletedThisPeriod
+        MAY (msExchSafeSendersHash $ msExchMobileMailboxFlags $ msExchObjectsDeletedThisPeriod $
+             altRecipientBL $ authOrigBL 
             ) )
 
 # Support for ExchangeActiveSyncDevices entries (sub-entry of customActiveDirectoryUser/user)
@@ -103,4 +104,10 @@ objectclass ( 666.666.666.666.666.666.3
         MAY ( cn $ msExchObjectsDeletedThisPeriod 
             ) )
 
+objectclass ( 666.666.666.666.666.666.4
+        NAME 'customActiveDirectoryUserTemplate'
+        SUP user
+        STRUCTURAL
+        MUST (objectSid $ sAMAccountName $ sAMAccountType
+            ) )
 

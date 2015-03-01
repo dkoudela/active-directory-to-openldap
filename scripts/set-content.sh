@@ -8,9 +8,13 @@ source ${SLAPDENV}
 
 for DATALDIF in ${DATALDIFS};
 do
-  echo "Importing: ${DATALDIF}"
+  DATALDIFABS=`readlink -f ${DATALDIF} `
+  echo "Processing begin: ${DATALDIFABS}"
+  echo "Converting: ${DATALDIFABS}"
   python ${D}/scripts/ldif-convertor.py --src=${DATALDIF} --dst=${DATALDIF}.tmp
+  echo "Importing: ${DATALDIFABS}"
   ldapadd -D "cn=Manager,${ROOTDN}" -y ${D}/passwdfile.conf -f ${DATALDIF}.tmp
   rm -f ${DATALDIF}.tmp
+  echo "Processing done: ${DATALDIFABS}"
 done
 
