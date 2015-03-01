@@ -4,7 +4,7 @@
 # OID must be changed together as it causes OID clash.
 #
 # The data etries must be converted to use 'mstop' instead of 'top'
-objectclass ( 2.5.6.0.0
+objectclass ( 666.666.666.666.666.666.1
         NAME 'mstop'
         SUP top
         AUXILIARY
@@ -70,7 +70,7 @@ objectclass ( 1.2.840.113556.1.5.9
 
 # Custom user objectclass containing all Microsoft attributes 
 # used by Active Directory user
-objectclass ( 1.2.840.113556.1.5.9.666
+objectclass ( 666.666.666.666.666.666.2
         NAME 'customActiveDirectoryUser'
         SUP user
         STRUCTURAL
@@ -94,11 +94,13 @@ objectclass ( 1.2.840.113556.1.5.9.666
             ) )
 
 # Support for ExchangeActiveSyncDevices entries (sub-entry of customActiveDirectoryUser/user)
-objectclass ( 666.666.666.666.666.666.1
+objectclass ( 666.666.666.666.666.666.3
         NAME 'exchangeActiveSyncDevices'
         SUP top
         STRUCTURAL
         MUST (msExchVersion
-             ) )
+             ) 
+        MAY ( cn $ msExchObjectsDeletedThisPeriod 
+            ) )
 
 
