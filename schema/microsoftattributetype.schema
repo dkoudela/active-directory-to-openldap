@@ -231,6 +231,119 @@ attributetype ( 1.2.840.113556.1.4.1963 NAME 'msDS-SupportedEncryptionTypes'
         SINGLE-VALUE
         )
 
+attributetype ( 1.2.840.113556.1.4.7000.102.59 NAME 'msExchALObjectVersion'
+        DESC 'msExchALObjectVersion'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51438 NAME 'msExchMailboxMoveBatchName'
+        DESC 'msExchMailboxMoveBatchName'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51400 NAME 'msExchMailboxMoveFlags'
+        DESC 'msExchMailboxMoveFlags'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51401 NAME 'msExchMailboxMoveStatus'
+        DESC 'msExchMailboxMoveStatus'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51398 NAME 'msExchMailboxMoveTargetMDBLink'
+        DESC 'msExchMailboxMoveTargetMDBLink'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50976 NAME 'msExchBlockedSendersHash'
+        DESC 'msExchBlockedSendersHash'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.40
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50051 NAME 'msExchPoliciesExcluded'
+        DESC 'msExchPoliciesExcluded'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51538 NAME 'msExchDelegateListBL'
+        DESC 'msExchDelegateListBL'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+        )
+
+attributetype ( 1.2.840.113556.1.2.126 NAME 'altRecipient'
+        DESC 'altRecipient'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.73 NAME 'msExchHideFromAddressLists'
+        DESC 'msExchHideFromAddressLists'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.6.20.1.124 NAME 'msExchOmaAdminWirelessEnable'
+        DESC 'msExchOmaAdminWirelessEnable'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51707 NAME 'msExchShadowProxyAddresses'
+        DESC 'msExchShadowProxyAddresses'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50954 NAME 'msExchCoManagedObjectsBL'
+        DESC 'msExchCoManagedObjectsBL'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+        )
+
+attributetype ( 1.2.840.113556.1.2.272 NAME 'mDBOverQuotaLimit'
+        DESC 'mDBOverQuotaLimit'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.11037 NAME 'mDBOverHardQuotaLimit'
+        DESC 'mDBOverHardQuotaLimit'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.2.266 NAME 'mDBStorageQuota'
+        DESC 'mDBStorageQuota'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50766 NAME 'msExchSafeRecipientsHash'
+        DESC 'msExchSafeRecipientsHash'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.40
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51152 NAME 'msExchBypassModerationBL'
+        DESC 'msExchBypassModerationBL'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51698 NAME 'msExchShadowMailNickname'
+        DESC 'msExchShadowMailNickname'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        )
+
+attributetype ( 1.2.840.113556.1.2.238 NAME 'publicDelegates'
+        DESC 'publicDelegates'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+        )
+
 #---
 
 attributetype ( 1.2.840.113556.1.4.856

@@ -74,24 +74,26 @@ objectclass ( 666.666.666.666.666.666.2
         NAME 'customActiveDirectoryUser'
         SUP user
         STRUCTURAL
-        MUST (homeMTA $ homeMDB $ garbageCollPeriod $ mDBUseDefaults $
-                extensionAttribute1 $ protocolSettings $ internetEncoding $
-                objectSid $ sAMAccountName $ sAMAccountType $ showInAddressBook $
-                legacyExchangeDN $ lastLogonTimestamp $ textEncodedORAddress $
-                msExchHomeServerName $ msExchMailboxSecurityDescriptor $
+        MUST (homeMTA $ homeMDB $ mDBUseDefaults $ objectSid $
+                sAMAccountName $ sAMAccountType $ legacyExchangeDN $
+                textEncodedORAddress $ msExchHomeServerName $ msExchMailboxSecurityDescriptor $
                 msExchUserAccountControl $ msExchMailboxGuid $ 
-                msExchPoliciesIncluded $ msExchUMDtmfMap $ msExchMDBRulesQuota $
-                msExchRecipientDisplayType $ msExchUserCulture $ msExchVersion $
-                msExchRecipientTypeDetails $ msExchUMEnabledFlags2 $
-                msExchModerationFlags $ msExchTransportRecipientSettingsFlags $
-                msExchProvisioningFlags $ msExchTextMessagingState $
-                msExchRBACPolicyLink $ msExchArchiveQuota $ msExchArchiveWarnQuota $
-                msExchDumpsterQuota $ msExchDumpsterWarningQuota $ msExchWhenMailboxCreated $
-                msExchMailboxAuditEnable $ msExchMailboxAuditLogAgeLimit $ msExchBypassAudit $
-                msExchAddressBookFlags
+                msExchRecipientDisplayType $ msExchVersion $ msExchRecipientTypeDetails $ 
+                msExchRBACPolicyLink $ msExchWhenMailboxCreated
             ) 
         MAY (msExchSafeSendersHash $ msExchMobileMailboxFlags $ msExchObjectsDeletedThisPeriod $
-             altRecipientBL $ authOrigBL 
+             lastLogonTimestamp $ internetEncoding $ protocolSettings $ garbageCollPeriod $ altRecipientBL $
+             msExchUMEnabledFlags2 $ msExchUserCulture $ msExchMDBRulesQuota $ msExchUMDtmfMap $ authOrigBL $
+             msExchProvisioningFlags $ msExchTransportRecipientSettingsFlags $ msExchModerationFlags $
+             msExchDumpsterWarningQuota $ msExchDumpsterQuota $ msExchArchiveWarnQuota $ msExchArchiveQuota $
+             msExchMailboxAuditLogAgeLimit $ msExchMailboxAuditEnable $ msExchBypassAudit $ msExchAddressBookFlags $
+             msExchALObjectVersion $ msExchMailboxMoveBatchName $ msExchMailboxMoveFlags $ msExchMailboxMoveStatus $
+             msExchMailboxMoveTargetMDBLink $ msExchBlockedSendersHash $ msExchPoliciesExcluded $ msExchPoliciesIncluded $
+             msExchTextMessagingState $ msExchDelegateListBL $ altRecipient $ msExchHideFromAddressLists $
+             msExchOmaAdminWirelessEnable $ showInAddressBook $ msExchShadowProxyAddresses $ msExchCoManagedObjectsBL $
+             extensionAttribute1 $ mDBOverQuotaLimit $ msDS-SupportedEncryptionTypes $ mDBOverHardQuotaLimit $
+             mDBStorageQuota $ msExchSafeRecipientsHash $ msExchBypassModerationBL $ msExchShadowMailNickname $
+             publicDelegates 
             ) )
 
 # Support for ExchangeActiveSyncDevices entries (sub-entry of customActiveDirectoryUser/user)
@@ -109,5 +111,9 @@ objectclass ( 666.666.666.666.666.666.4
         SUP user
         STRUCTURAL
         MUST (objectSid $ sAMAccountName $ sAMAccountType
-            ) )
+             ) 
+        MAY ( msDS-SupportedEncryptionTypes ) 
+            )
+
+
 

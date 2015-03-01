@@ -9,7 +9,8 @@ class ActiveDirectoryToOpenLdapLDIFConvertor(LDIFParser):
     objectclassAddsBasedOnDN = { 'CN=ExchangeActiveSyncDevices' : 'exchangeActiveSyncDevices' }
 
     objectclassChangesBasedOnDN = { 'CN=_Template ': { 'user': 'customActiveDirectoryUserTemplate' },
-                                    'CN=_Template_': { 'user': 'customActiveDirectoryUserTemplate' }
+                                    'CN=_Template_': { 'user': 'customActiveDirectoryUserTemplate' },
+                                    'CN=_Template\, ': { 'user': 'customActiveDirectoryUserTemplate' }
                                   }
 
     objectclassMappings = { 'top' : 'mstop', 'user' : 'customActiveDirectoryUser' }
