@@ -251,12 +251,18 @@ attributetype ( 2.5.4.33 NAME 'roleOccupant'
 #	EQUALITY octetStringMatch
 #	SYNTAX 1.3.6.1.4.1.1466.115.121.1.40{128} )
 
-# Must be transferred using ;binary
-# with certificateExactMatch rule (per X.509)
+# 2.5.4.36 NAME 'userCertificate' Changed: 
+#   SYNTAX 1.3.6.1.4.1.1466.115.121.1.8 -> 1.3.6.1.4.1.1466.115.121.1.40 
+#   EQUALITY certificateExactMatch -> {none}
+#
+## Must be transferred using ;binary
+## with certificateExactMatch rule (per X.509)
+#attributetype ( 2.5.4.36 NAME 'userCertificate'
+#	DESC 'RFC2256: X.509 user certificate, use ;binary'
+#	EQUALITY certificateExactMatch
+#	SYNTAX 1.3.6.1.4.1.1466.115.121.1.8 )
 attributetype ( 2.5.4.36 NAME 'userCertificate'
-	DESC 'RFC2256: X.509 user certificate, use ;binary'
-	EQUALITY certificateExactMatch
-	SYNTAX 1.3.6.1.4.1.1466.115.121.1.8 )
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.40 )
 
 # Must be transferred using ;binary
 # with certificateExactMatch rule (per X.509)

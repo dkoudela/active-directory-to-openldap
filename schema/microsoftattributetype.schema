@@ -344,6 +344,11 @@ attributetype ( 1.2.840.113556.1.2.238 NAME 'publicDelegates'
         SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
         )
 
+attributetype ( 1.2.840.113556.1.2.295 NAME 'publicDelegatesBL'
+        DESC 'publicDelegatesBL'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+        )
+
 #---
 
 attributetype ( 1.2.840.113556.1.4.856

@@ -93,7 +93,7 @@ objectclass ( 666.666.666.666.666.666.2
              msExchOmaAdminWirelessEnable $ showInAddressBook $ msExchShadowProxyAddresses $ msExchCoManagedObjectsBL $
              extensionAttribute1 $ mDBOverQuotaLimit $ msDS-SupportedEncryptionTypes $ mDBOverHardQuotaLimit $
              mDBStorageQuota $ msExchSafeRecipientsHash $ msExchBypassModerationBL $ msExchShadowMailNickname $
-             publicDelegates 
+             publicDelegates $ publicDelegatesBL
             ) )
 
 # Support for ExchangeActiveSyncDevices entries (sub-entry of customActiveDirectoryUser/user)
