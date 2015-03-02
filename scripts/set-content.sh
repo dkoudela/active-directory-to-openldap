@@ -13,7 +13,7 @@ do
   echo "Converting: ${DATALDIFABS}"
   python ${D}/scripts/ldif-convertor.py --src=${DATALDIF} --dst=${DATALDIF}.tmp
   echo "Importing: ${DATALDIFABS}"
-  ldapadd -D "cn=Manager,${ROOTDN}" -y ${D}/passwdfile.conf -f ${DATALDIF}.tmp
+  time ldapadd -D "cn=Manager,${ROOTDN}" -y ${D}/passwdfile.conf -f ${DATALDIF}.tmp
   rm -f ${DATALDIF}.tmp
   echo "Processing done: ${DATALDIFABS}"
 done

@@ -349,6 +349,30 @@ attributetype ( 1.2.840.113556.1.2.295 NAME 'publicDelegatesBL'
         SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
         )
 
+attributetype ( 1.2.840.113556.1.4.7000.102.51608 NAME 'msExchLastExchangeChangedTime'
+        DESC 'msExchLastExchangeChangedTime'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51694 NAME 'msExchShadowGivenName'
+        DESC 'msExchShadowGivenName'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51747 NAME 'msExchShadowManagerLink'
+        DESC 'msExchShadowManagerLink'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.5062 NAME 'msExchRequireAuthToSendTo'
+        DESC 'msExchRequireAuthToSendTo'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+        SINGLE-VALUE
+        )
+
 #---
 
 attributetype ( 1.2.840.113556.1.4.856
@@ -1071,9 +1095,15 @@ attributetype ( 1.2.840.113556.1.4.370
 	SYNTAX '1.3.6.1.4.1.1466.115.121.1.27'
 	SINGLE-VALUE )
 
+# Printable String does not support '_'
+#
+#attributetype ( 1.2.840.113556.1.4.655
+#	NAME 'legacyExchangeDN'
+#	SYNTAX '1.3.6.1.4.1.1466.115.121.1.44'
+#	SINGLE-VALUE )
 attributetype ( 1.2.840.113556.1.4.655
 	NAME 'legacyExchangeDN'
-	SYNTAX '1.3.6.1.4.1.1466.115.121.1.44'
+	SYNTAX '1.3.6.1.4.1.1466.115.121.1.15'
 	SINGLE-VALUE )
 
 attributetype ( 1.2.840.113556.1.4.470
