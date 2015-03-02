@@ -373,6 +373,112 @@ attributetype ( 1.2.840.113556.1.4.5062 NAME 'msExchRequireAuthToSendTo'
         SINGLE-VALUE
         )
 
+attributetype ( 1.2.840.113556.1.2.432 NAME 'extensionAttribute10'
+        DESC 'extensionAttribute10'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.81 NAME 'msExchMasterAccountSid'
+        DESC 'msExchMasterAccountSid'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.40
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.2.82 NAME 'securityProtocol'
+        DESC 'securityProtocol'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.40
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.12527 NAME 'dLMemDefault'
+        DESC 'dLMemDefault'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.2.138 NAME 'delivContLength'
+        DESC 'delivContLength'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.2.424 NAME 'extensionAttribute2'
+        DESC 'extensionAttribute2'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.2.425 NAME 'extensionAttribute3'
+        DESC 'extensionAttribute3'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.2.426 NAME 'extensionAttribute4'
+        DESC 'extensionAttribute4'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.2.427 NAME 'extensionAttribute5'
+        DESC 'extensionAttribute5'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.2.428 NAME 'extensionAttribute6'
+        DESC 'extensionAttribute6'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.2.429 NAME 'extensionAttribute7'
+        DESC 'extensionAttribute7'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.2.430 NAME 'extensionAttribute8'
+        DESC 'extensionAttribute8'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.2.431 NAME 'extensionAttribute9'
+        DESC 'extensionAttribute9'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.2.371 NAME 'mAPIRecipient'
+        DESC 'mAPIRecipient'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.63 NAME 'msExchADCGlobalNames'
+        DESC 'msExchADCGlobalNames'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        )
+
+attributetype ( 1.2.840.113556.1.2.444 NAME 'msExchAssistantName'
+        DESC 'msExchAssistantName'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.2.604 NAME 'replicatedObjectVersion'
+        DESC 'replicatedObjectVersion'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.52 NAME 'replicationSignature'
+        DESC 'replicationSignature'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.40
+        SINGLE-VALUE
+        )
+
 #---
 
 attributetype ( 1.2.840.113556.1.4.856

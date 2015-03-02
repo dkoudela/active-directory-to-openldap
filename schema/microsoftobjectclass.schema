@@ -90,7 +90,11 @@ objectclass ( 666.666.666.666.666.666.2
              mDBStorageQuota $ msExchSafeRecipientsHash $ msExchBypassModerationBL $ msExchShadowMailNickname $
              publicDelegates $ publicDelegatesBL $ msExchLastExchangeChangedTime $ msExchShadowGivenName $
              msExchMailboxGuid $ msExchRecipientDisplayType $ msExchShadowManagerLink $ msExchRequireAuthToSendTo $
-             msExchRBACPolicyLink $ msExchVersion $ msExchRecipientTypeDetails $ msExchWhenMailboxCreated
+             msExchRBACPolicyLink $ msExchVersion $ msExchRecipientTypeDetails $ msExchWhenMailboxCreated $
+             extensionAttribute10 $ msExchMasterAccountSid $ securityProtocol $ dLMemDefault $ delivContLength $
+             extensionAttribute2 $ extensionAttribute3 $ extensionAttribute4 $ extensionAttribute5 $ extensionAttribute6 $
+             extensionAttribute7 $ extensionAttribute8 $ extensionAttribute9 $ mAPIRecipient $ msExchADCGlobalNames $
+             msExchAssistantName $ replicatedObjectVersion $ replicationSignature 
             ) )
 
 # Support for ExchangeActiveSyncDevices entries (sub-entry of customActiveDirectoryUser/user)
