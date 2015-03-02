@@ -479,6 +479,65 @@ attributetype ( 1.2.840.113556.1.4.7000.102.52 NAME 'replicationSignature'
         SINGLE-VALUE
         )
 
+attributetype ( 1.2.840.113556.1.2.280 NAME 'submissionContLength'
+        DESC 'submissionContLength'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.2.79 NAME 'telephoneAssistant'
+        DESC 'telephoneAssistant'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51692 NAME 'msExchShadowDisplayName'
+        DESC 'msExchShadowDisplayName'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51708 NAME 'msExchShadowSn'
+        DESC 'msExchShadowSn'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.2.190 NAME 'deliverAndRedirect'
+        DESC 'deliverAndRedirect'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51530 NAME 'msExchDelegateListLink'
+        DESC 'msExchDelegateListLink'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+        )
+
+attributetype ( 1.2.840.113556.1.2.106 NAME 'deletedItemFlags'
+        DESC 'deletedItemFlags'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51761 NAME 'msExchShadowCompany'
+        DESC 'msExchShadowCompany'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51691 NAME 'msExchShadowDepartment'
+        DESC 'msExchShadowDepartment'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51713 NAME 'msExchShadowTitle'
+        DESC 'msExchShadowTitle'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE
+        )
+
 #---
 
 attributetype ( 1.2.840.113556.1.4.856

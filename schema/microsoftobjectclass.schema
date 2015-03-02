@@ -94,7 +94,9 @@ objectclass ( 666.666.666.666.666.666.2
              extensionAttribute10 $ msExchMasterAccountSid $ securityProtocol $ dLMemDefault $ delivContLength $
              extensionAttribute2 $ extensionAttribute3 $ extensionAttribute4 $ extensionAttribute5 $ extensionAttribute6 $
              extensionAttribute7 $ extensionAttribute8 $ extensionAttribute9 $ mAPIRecipient $ msExchADCGlobalNames $
-             msExchAssistantName $ replicatedObjectVersion $ replicationSignature 
+             msExchAssistantName $ replicatedObjectVersion $ replicationSignature $ submissionContLength $ telephoneAssistant $
+             msExchShadowDisplayName $ msExchShadowSn $ deliverAndRedirect $ msExchDelegateListLink $ deletedItemFlags $
+             msExchShadowCompany $ msExchShadowDepartment $ msExchShadowTitle 
             ) )
 
 # Support for ExchangeActiveSyncDevices entries (sub-entry of customActiveDirectoryUser/user)
