@@ -1,3 +1,26 @@
+objectclass ( 1.2.840.113556.1.5.67
+        NAME 'domainDNS'
+        SUP domain
+        STRUCTURAL
+        MAY (managedBy $ msDS-AllowedDNSSuffixes $ msDS-Behavior-Version $ msDS-EnabledFeature $ msDS-USNLastSyncSuccess $ msExchPolicyList ) )
+
+objectclass ( 1.2.840.113556.1.5.8
+        NAME 'group'
+        SUP top
+        STRUCTURAL 
+        MUST ( groupType )
+        MAY ( adminCount $ controlAccessRights $ dLMemberRule $ desktopProfile $ groupAttributes $ groupMembershipSAM $ hideDLMembership $
+              location $ mail $ managedBy $ member $ msDS-AzApplicationData $ msDS-AzBizRule $ msDS-AzBizRuleLanguage $ msDS-AzGenericData $
+              msDS-AzLDAPQuery $ msDS-AzLastImportedBizRulePath $ msDS-AzObjectGuid $ msDS-HABSeniorityIndex $ msDS-NonMembers $ msDS-PhoneticDisplayName $
+              msExchArbitrationMailbox $ msExchCoManagedByLink $ msExchGroupDepartRestriction $ msExchGroupJoinRestriction $ msExchMasterAccountHistory $
+              msExchOriginatingForest $ msExchServerAdminDelegationBL $ msOrg-GroupSubtypeName $ msOrg-IsOrganizational $ msOrg-Leaders $
+              msOrg-OtherDisplayNames $ msSFU30Name $ msSFU30NisDomain $ msSFU30PosixMember $ nTGroupMembers $ nonSecurityMember $ oOFReplyToOriginator $
+              operatorCount $ owner $ primaryGroupToken $ reportToOriginator $ reportToOwner $ thumbnailPhoto
+            ) )
+
+
+#---
+
 # mstop is the new root objectclass for all MS entries.
 # The origin OpenLdap top objectclass cannot be modified as
 # it is hardcoded in the OpenLdap source code.
@@ -30,14 +53,6 @@ objectclass ( 666.666.666.666.666.666.1
                 sDRightsEffective $ dSCorePropagationData $
                 otherWellKnownObjects $ mS-DS-ConsistencyGuid $
                 mS-DS-ConsistencyChildCount $ nTSecurityDescriptor $ masteredBy ) )
-
-objectclass ( 1.2.840.113556.1.5.67
-        NAME 'domainDNS'
-        SUP domain
-        STRUCTURAL
-        MAY (managedBy $ msDS-AllowedDNSSuffixes) )
-
-#---
 
 objectclass ( 1.2.840.113556.1.5.9
         NAME 'user'

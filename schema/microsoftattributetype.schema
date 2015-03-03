@@ -602,6 +602,194 @@ attributetype ( 1.2.840.113556.1.4.7000.102.51260 NAME 'msExchUserBL'
         SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
         )
 
+attributetype ( 1.2.840.113556.1.4.1459 NAME 'msDS-Behavior-Version'
+        DESC 'msDS-Behavior-Version'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.2061 NAME 'msDS-EnabledFeature'
+        DESC 'msDS-EnabledFeature'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+        )
+
+attributetype ( 1.2.840.113556.1.4.2055 NAME 'msDS-USNLastSyncSuccess'
+        DESC 'msDS-USNLastSyncSuccess'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50004 NAME 'msExchPolicyList'
+        DESC 'msExchPolicyList'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+        )
+
+attributetype ( 1.2.840.113556.1.2.330 NAME 'dLMemberRule'
+        DESC 'dLMemberRule'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.40
+        )
+
+attributetype ( 1.2.840.113556.1.2.297 NAME 'hideDLMembership'
+        DESC 'hideDLMembership'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.1819 NAME 'msDS-AzApplicationData'
+        DESC 'msDS-AzApplicationData'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.1801 NAME 'msDS-AzBizRule'
+        DESC 'msDS-AzBizRule'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.1802 NAME 'msDS-AzBizRuleLanguage'
+        DESC 'msDS-AzBizRuleLanguage'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.1950 NAME 'msDS-AzGenericData'
+        DESC 'msDS-AzGenericData'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.1792 NAME 'msDS-AzLDAPQuery'
+        DESC 'msDS-AzLDAPQuery'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.1803 NAME 'msDS-AzLastImportedBizRulePath'
+        DESC 'msDS-AzLastImportedBizRulePath'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.1949 NAME 'msDS-AzObjectGuid'
+        DESC 'msDS-AzObjectGuid'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.40
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.1997 NAME 'msDS-HABSeniorityIndex'
+        DESC 'msDS-HABSeniorityIndex'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.1793 NAME 'msDS-NonMembers'
+        DESC 'msDS-NonMembers'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+        )
+
+attributetype ( 1.2.840.113556.1.4.1946 NAME 'msDS-PhoneticDisplayName'
+        DESC 'msDS-PhoneticDisplayName'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50957 NAME 'msExchArbitrationMailbox'
+        DESC 'msExchArbitrationMailbox'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50953 NAME 'msExchCoManagedByLink'
+        DESC 'msExchCoManagedByLink'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50964 NAME 'msExchGroupDepartRestriction'
+        DESC 'msExchGroupDepartRestriction'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50963 NAME 'msExchGroupJoinRestriction'
+        DESC 'msExchGroupJoinRestriction'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50835 NAME 'msExchMasterAccountHistory'
+        DESC 'msExchMasterAccountHistory'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.40
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50300 NAME 'msExchOriginatingForest'
+        DESC 'msExchOriginatingForest'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50640 NAME 'msExchServerAdminDelegationBL'
+        DESC 'msExchServerAdminDelegationBL'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+        )
+
+attributetype ( 1.2.840.113556.1.6.47.2.3 NAME 'msOrg-GroupSubtypeName'
+        DESC 'msOrg-GroupSubtypeName'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.6.47.2.1 NAME 'msOrg-IsOrganizational'
+        DESC 'msOrg-IsOrganizational'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.6.47.2.2 NAME 'msOrg-Leaders'
+        DESC 'msOrg-Leaders'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+        )
+
+attributetype ( 1.2.840.113556.1.6.47.2.4 NAME 'msOrg-OtherDisplayNames'
+        DESC 'msOrg-OtherDisplayNames'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        )
+
+attributetype ( 1.2.840.113556.1.6.18.1.309 NAME 'msSFU30Name'
+        DESC 'msSFU30Name'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.26
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.6.18.1.339 NAME 'msSFU30NisDomain'
+        DESC 'msSFU30NisDomain'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.26
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.6.18.1.346 NAME 'msSFU30PosixMember'
+        DESC 'msSFU30PosixMember'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.2.438 NAME 'oOFReplyToOriginator'
+        DESC 'oOFReplyToOriginator'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.2.206 NAME 'reportToOriginator'
+        DESC 'reportToOriginator'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.2.207 NAME 'reportToOwner'
+        DESC 'reportToOwner'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+        SINGLE-VALUE
+        )
+
 #---
 
 attributetype ( 1.2.840.113556.1.4.856
