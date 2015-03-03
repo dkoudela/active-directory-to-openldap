@@ -15,6 +15,8 @@ class ActiveDirectoryToOpenLdapLDIFConvertor(LDIFParser):
 
     objectclassMappings = { 'top' : 'mstop', 'user' : 'customActiveDirectoryUser' }
 
+    attributetypesValuesDuplicates = [ 'dSCorePropagationData' ]
+
     def __init__(self, input, output):
         LDIFParser.__init__(self, input)
         self.writer = LDIFWriter(output)
@@ -47,11 +49,17 @@ class ActiveDirectoryToOpenLdapLDIFConvertor(LDIFParser):
                         entry['objectClass'][index] = self.objectclassMappings[objMap]
                 index += 1
 
+    def removeDuplicateAttributeValues(self, dn, entry):
+        for attributetype in self.attributetypesValuesDuplicates:
+            if attributetype in entry.keys():
+                entry[attributetype] = list(set(entry[attributetype]))
+
 
     def handle(self, dn, entry):
         self.addObjectclassesBasedOnDN(dn, entry)
         self.changeObjectclassesBasedOnDN(dn, entry)
         self.changeObjectclasses(dn, entry)
+        self.removeDuplicateAttributeValues(dn, entry)
         self.writer.unparse(dn, entry)
 
 if __name__ == '__main__':
