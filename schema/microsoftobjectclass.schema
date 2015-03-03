@@ -97,7 +97,8 @@ objectclass ( 666.666.666.666.666.666.2
              msExchAssistantName $ replicatedObjectVersion $ replicationSignature $ submissionContLength $ telephoneAssistant $
              msExchShadowDisplayName $ msExchShadowSn $ deliverAndRedirect $ msExchDelegateListLink $ deletedItemFlags $
              msExchShadowCompany $ msExchShadowDepartment $ msExchShadowTitle $ msExchShadowPhysicalDeliveryOfficeName $
-             msTSExpireDate $ msTSLicenseVersion $ msTSManagingLS $ msExchShadowCountryCode $ autoReplyMessage $ msExchELCMailboxFlags 
+             msTSExpireDate $ msTSLicenseVersion $ msTSManagingLS $ msExchShadowCountryCode $ autoReplyMessage $ msExchELCMailboxFlags $
+             msExchShadowInitials $ msExchShadowMobile $ msExchModeratedObjectsBL $ msExchUserBL
             ) )
 
 # Support for ExchangeActiveSyncDevices entries (sub-entry of customActiveDirectoryUser/user)
@@ -116,8 +117,9 @@ objectclass ( 666.666.666.666.666.666.4
         STRUCTURAL
         MUST (objectSid $ sAMAccountName $ sAMAccountType
              ) 
-        MAY ( msDS-SupportedEncryptionTypes $ msExchUserAccountControl ) 
-            )
+        MAY ( msDS-SupportedEncryptionTypes $ msExchUserAccountControl $ legacyExchangeDN $ msExchALObjectVersion $ msExchPoliciesIncluded $
+              textEncodedORAddress
+            ) )
 
 
 

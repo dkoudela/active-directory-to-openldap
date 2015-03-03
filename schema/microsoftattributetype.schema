@@ -580,6 +580,28 @@ attributetype ( 1.2.840.113556.1.4.7000.102.50761 NAME 'msExchELCMailboxFlags'
         SINGLE-VALUE
         )
 
+attributetype ( 1.2.840.113556.1.4.7000.102.51762 NAME 'msExchShadowInitials'
+        DESC 'msExchShadowInitials'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51699 NAME 'msExchShadowMobile'
+        DESC 'msExchShadowMobile'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50955 NAME 'msExchModeratedObjectsBL'
+        DESC 'msExchModeratedObjectsBL'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+        )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51260 NAME 'msExchUserBL'
+        DESC 'msExchUserBL'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+        )
+
 #---
 
 attributetype ( 1.2.840.113556.1.4.856
