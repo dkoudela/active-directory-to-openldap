@@ -6,14 +6,15 @@ from ldif import LDIFParser, LDIFWriter
 
 
 class ActiveDirectoryToOpenLdapLDIFConvertor(LDIFParser):
-    objectclassAddsBasedOnDN = { 'CN=ExchangeActiveSyncDevices' : 'exchangeActiveSyncDevices' }
+    objectclassAddsBasedOnDN = { 'CN=ExchangeActiveSyncDevices' : 'exchangeActiveSyncDevices'
+                               }
 
     objectclassChangesBasedOnDN = { 'CN=_Template ': { 'user': 'customActiveDirectoryUserTemplate' },
                                     'CN=_Template_': { 'user': 'customActiveDirectoryUserTemplate' },
                                     'CN=_Template\, ': { 'user': 'customActiveDirectoryUserTemplate' }
                                   }
 
-    objectclassMappings = { 'top' : 'mstop', 'user' : 'customActiveDirectoryUser' }
+    objectclassMappings = { 'top' : 'mstop', 'user' : 'customActiveDirectoryUser', 'group' : 'customActiveDirectoryGroup' }
 
     attributetypesValuesDuplicates = [ 'dSCorePropagationData' ]
 

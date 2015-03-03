@@ -136,5 +136,54 @@ objectclass ( 666.666.666.666.666.666.4
               textEncodedORAddress
             ) )
 
+# Fake object class simulating attributes used by 'group' entries coming from 
+# inetOrgPerson
+objectclass ( 666.666.666.666.666.666.5
+    NAME 'inetOrgGroup'
+    SUP group
+    STRUCTURAL
+    MAY (
+        audio $ businessCategory $ carLicense $ departmentNumber $
+        displayName $ employeeNumber $ employeeType $ givenName $
+        homePhone $ homePostalAddress $ initials $ jpegPhoto $
+        labeledURI $ mail $ manager $ mobile $ o $ pager $
+        photo $ roomNumber $ secretary $ uid $ userCertificate $
+        x500uniqueIdentifier $ preferredLanguage $
+        userSMIMECertificate $ userPKCS12 $ proxyAddresses $
+        department $ company $ mailNickname )
+    )
+
+# Custom group objectclass containing all Microsoft attributes 
+# used by Active Directory group
+objectclass ( 666.666.666.666.666.666.6
+        NAME 'customActiveDirectoryGroup'
+        SUP inetOrgGroup
+        STRUCTURAL
+        MUST (objectSid $ sAMAccountName $ sAMAccountType 
+             ) 
+        MAY (homeMTA $ homeMDB $ mDBUseDefaults $ msExchSafeSendersHash $ msExchMobileMailboxFlags $ msExchObjectsDeletedThisPeriod $
+             legacyExchangeDN $ lastLogonTimestamp $ internetEncoding $ protocolSettings $ garbageCollPeriod $ altRecipientBL $
+             textEncodedORAddress $ msExchUMEnabledFlags2 $ msExchUserCulture $ msExchMDBRulesQuota $ msExchUMDtmfMap $ authOrigBL $
+             msExchHomeServerName $ msExchProvisioningFlags $ msExchTransportRecipientSettingsFlags $ msExchModerationFlags $
+             msExchMailboxSecurityDescriptor $ msExchDumpsterWarningQuota $ msExchDumpsterQuota $ msExchArchiveWarnQuota $ msExchArchiveQuota $
+             msExchUserAccountControl $ msExchMailboxAuditLogAgeLimit $ msExchMailboxAuditEnable $ msExchBypassAudit $ msExchAddressBookFlags $
+             msExchALObjectVersion $ msExchMailboxMoveBatchName $ msExchMailboxMoveFlags $ msExchMailboxMoveStatus $
+             msExchMailboxMoveTargetMDBLink $ msExchBlockedSendersHash $ msExchPoliciesExcluded $ msExchPoliciesIncluded $
+             msExchTextMessagingState $ msExchDelegateListBL $ altRecipient $ msExchHideFromAddressLists $
+             msExchOmaAdminWirelessEnable $ showInAddressBook $ msExchShadowProxyAddresses $ msExchCoManagedObjectsBL $
+             extensionAttribute1 $ mDBOverQuotaLimit $ msDS-SupportedEncryptionTypes $ mDBOverHardQuotaLimit $
+             mDBStorageQuota $ msExchSafeRecipientsHash $ msExchBypassModerationBL $ msExchShadowMailNickname $
+             publicDelegates $ publicDelegatesBL $ msExchLastExchangeChangedTime $ msExchShadowGivenName $
+             msExchMailboxGuid $ msExchRecipientDisplayType $ msExchShadowManagerLink $ msExchRequireAuthToSendTo $
+             msExchRBACPolicyLink $ msExchVersion $ msExchRecipientTypeDetails $ msExchWhenMailboxCreated $
+             extensionAttribute10 $ msExchMasterAccountSid $ securityProtocol $ dLMemDefault $ delivContLength $
+             extensionAttribute2 $ extensionAttribute3 $ extensionAttribute4 $ extensionAttribute5 $ extensionAttribute6 $
+             extensionAttribute7 $ extensionAttribute8 $ extensionAttribute9 $ mAPIRecipient $ msExchADCGlobalNames $
+             msExchAssistantName $ replicatedObjectVersion $ replicationSignature $ submissionContLength $ telephoneAssistant $
+             msExchShadowDisplayName $ msExchShadowSn $ deliverAndRedirect $ msExchDelegateListLink $ deletedItemFlags $
+             msExchShadowCompany $ msExchShadowDepartment $ msExchShadowTitle $ msExchShadowPhysicalDeliveryOfficeName $
+             msTSExpireDate $ msTSLicenseVersion $ msTSManagingLS $ msExchShadowCountryCode $ autoReplyMessage $ msExchELCMailboxFlags $
+             msExchShadowInitials $ msExchShadowMobile $ msExchModeratedObjectsBL $ msExchUserBL
+            ) )
 
 
