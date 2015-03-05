@@ -1,4 +1,4 @@
-#/usr/bin/env python
+#!/usr/bin/python
 
 import argparse
 import sys
@@ -13,7 +13,7 @@ class OpenLdapSchemaWriter:
         '2.5.5.2'  : '1.3.6.1.4.1.1466.115.121.1.44', # OID -> Printable String
         '2.5.5.3'  : '1.3.6.1.4.1.1466.115.121.1.44', # Case-sensitive string (a.k.a. case-exact string) -> Printable String
         '2.5.5.4'  : '1.3.6.1.4.1.1466.115.121.1.44', # Case-ignore string (teletex) -> Printable String
-        '2.5.5.5'  : '1.3.6.1.4.1.1466.115.121.1.44', # Printable String
+        '2.5.5.5'  : '1.3.6.1.4.1.1466.115.121.1.15', # Printable String -> Directory String
         '2.5.5.6'  : '1.3.6.1.4.1.1466.115.121.1.36', # Numeric String
         '2.5.5.7'  : '1.3.6.1.4.1.1466.115.121.1.44', # OR Name -> Printable String
         '2.5.5.8'  : '1.3.6.1.4.1.1466.115.121.1.7',  # Boolean
@@ -108,6 +108,6 @@ if __name__ == '__main__':
     parser.add_argument('--dst', metavar='DESTINATION', help='Destination ldif')
     args = parser.parse_args()
 
-    parser = ActiveDirectorySchemaLdifExportToOpenLdapSchema(open(args.src, 'rb'), open(args.dst, 'wb'))
-    parser.parse()
+    adparser = ActiveDirectorySchemaLdifExportToOpenLdapSchema(open(args.src, 'rb'), open(args.dst, 'wb'))
+    adparser.parse()
 
