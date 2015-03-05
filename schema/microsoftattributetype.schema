@@ -1452,6 +1452,54 @@ attributetype ( 1.2.840.113556.1.2.292
  SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
   )
 
+attributetype ( 1.2.840.113556.1.4.7000.102.50351
+ NAME 'msExchMailboxTemplateLink'
+ DESC 'msExchMailboxTemplateLink'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.7031
+ NAME 'msExchIMACL'
+ DESC 'msExchIMACL'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.40
+  )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.7038
+ NAME 'msExchIMAddress'
+ DESC 'msExchIMAddress'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.7035
+ NAME 'msExchIMMetaPhysicalURL'
+ DESC 'msExchIMMetaPhysicalURL'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.7036
+ NAME 'msExchIMPhysicalURL'
+ DESC 'msExchIMPhysicalURL'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.7037
+ NAME 'msExchIMVirtualServer'
+ DESC 'msExchIMVirtualServer'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50668
+ NAME 'msExchMobileMailboxPolicyLink'
+ DESC 'msExchMobileMailboxPolicyLink'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+ SINGLE-VALUE )
+
+attributetype ( 1.3.6.1.4.1.63.1000.1.1.1.1.16
+ NAME 'apple-mcxsettings'
+ DESC 'apple-mcxsettings'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  )
+
 #---
 
 attributetype ( 1.2.840.113556.1.4.856
