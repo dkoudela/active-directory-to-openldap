@@ -790,6 +790,668 @@ attributetype ( 1.2.840.113556.1.2.207 NAME 'reportToOwner'
         SINGLE-VALUE
         )
 
+attributetype ( 1.2.840.113556.1.4.1879 NAME 'msDS-SourceObjectDN'
+        DESC 'msDS-SourceObjectDN'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE
+        )
+
+attributetype ( 1.2.840.113556.1.2.352 NAME 'targetAddress'
+        DESC 'targetAddress'
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+        SINGLE-VALUE
+        )
+
+# 1.3.6.1.4.1.250.1.57 -> 1.3.6.1.4.1.250.1.57.0 clash with OpenLdap
+attributetype ( 1.3.6.1.4.1.250.1.57.0
+ NAME 'DUP-labeledURI-e20b3d32-5a2b-4f6c-84c0-65c94ba52437'
+ DESC 'DUP-labeledURI-e20b3d32-5a2b-4f6c-84c0-65c94ba52437'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  )
+
+# 0.9.2342.19200300.100.1.21 -> 0.9.2342.19200300.100.1.21.0 clash with OpenLdap
+attributetype ( 0.9.2342.19200300.100.1.21.0
+ NAME 'DUP-secretary-00efea41-cee1-4f20-b9c3-a2a93ec60616'
+ DESC 'DUP-secretary-00efea41-cee1-4f20-b9c3-a2a93ec60616'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  )
+
+attributetype ( 1.2.840.113556.1.2.129
+ NAME 'authOrig'
+ DESC 'authOrig'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.44
+  )
+
+attributetype ( 1.2.840.113556.1.2.47
+ NAME 'dLMemRejectPerms'
+ DESC 'dLMemRejectPerms'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.44
+  )
+
+attributetype ( 1.2.840.113556.1.2.293
+ NAME 'dLMemRejectPermsBL'
+ DESC 'dLMemRejectPermsBL'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  )
+
+attributetype ( 1.2.840.113556.1.2.144
+ NAME 'dLMemSubmitPerms'
+ DESC 'dLMemSubmitPerms'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.44
+  )
+
+attributetype ( 1.2.840.113556.1.2.291
+ NAME 'dLMemSubmitPermsBL'
+ DESC 'dLMemSubmitPermsBL'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  )
+
+attributetype ( 1.2.840.113556.1.2.140
+ NAME 'delivExtContTypes'
+ DESC 'delivExtContTypes'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.40
+  )
+
+attributetype ( 1.2.840.113556.1.2.241
+ NAME 'deliveryMechanism'
+ DESC 'deliveryMechanism'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.2.474
+ NAME 'enabledProtocols'
+ DESC 'enabledProtocols'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.2.394
+ NAME 'expirationTime'
+ DESC 'expirationTime'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.2.228
+ NAME 'extensionData'
+ DESC 'extensionData'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.40
+  )
+
+attributetype ( 1.2.840.113556.1.2.337
+ NAME 'folderPathname'
+ DESC 'folderPathname'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.2.607
+ NAME 'formData'
+ DESC 'formData'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.40
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.2.606
+ NAME 'forwardingAddress'
+ DESC 'forwardingAddress'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.2.263
+ NAME 'importedFrom'
+ DESC 'importedFrom'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.2.616
+ NAME 'language'
+ DESC 'language'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.2.467
+ NAME 'languageCode'
+ DESC 'languageCode'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51149
+ NAME 'msExchAggregationSubscriptionCredential'
+ DESC 'msExchAggregationSubscriptionCredential'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51673
+ NAME 'msExchAuditAdmin'
+ DESC 'msExchAuditAdmin'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51674
+ NAME 'msExchAuditDelegate'
+ DESC 'msExchAuditDelegate'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51675
+ NAME 'msExchAuditDelegateAdmin'
+ DESC 'msExchAuditDelegateAdmin'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51676
+ NAME 'msExchAuditOwner'
+ DESC 'msExchAuditOwner'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51151
+ NAME 'msExchBypassModerationFromDLMembersBL'
+ DESC 'msExchBypassModerationFromDLMembersBL'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51141
+ NAME 'msExchBypassModerationFromDLMembersLink'
+ DESC 'msExchBypassModerationFromDLMembersLink'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51140
+ NAME 'msExchBypassModerationLink'
+ DESC 'msExchBypassModerationLink'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51754
+ NAME 'msExchCalculatedTargetAddress'
+ DESC 'msExchCalculatedTargetAddress'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51336
+ NAME 'msExchCalendarRepairDisabled'
+ DESC 'msExchCalendarRepairDisabled'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51581
+ NAME 'msExchCapabilityIdentifiers'
+ DESC 'msExchCapabilityIdentifiers'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50049
+ NAME 'msExchCustomProxyAddresses'
+ DESC 'msExchCustomProxyAddresses'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51414
+ NAME 'msExchDirsyncID'
+ DESC 'msExchDirsyncID'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51746
+ NAME 'msExchDirsyncSourceObjectClass'
+ DESC 'msExchDirsyncSourceObjectClass'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51506
+ NAME 'msExchEdgeSyncRetryCount'
+ DESC 'msExchEdgeSyncRetryCount'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50969
+ NAME 'msExchEnableModeration'
+ DESC 'msExchEnableModeration'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51577
+ NAME 'msExchEwsApplicationAccessPolicy'
+ DESC 'msExchEwsApplicationAccessPolicy'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51571
+ NAME 'msExchEwsEnabled'
+ DESC 'msExchEwsEnabled'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51573
+ NAME 'msExchEwsExceptions'
+ DESC 'msExchEwsExceptions'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51576
+ NAME 'msExchEwsWellKnownApplicationPolicies'
+ DESC 'msExchEwsWellKnownApplicationPolicies'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.49
+ NAME 'msExchExpansionServerName'
+ DESC 'msExchExpansionServerName'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51032
+ NAME 'msExchExternalSyncState'
+ DESC 'msExchExternalSyncState'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.10001
+ NAME 'msExchFBURL'
+ DESC 'msExchFBURL'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51561
+ NAME 'msExchForeignGroupSID'
+ DESC 'msExchForeignGroupSID'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.40
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51620
+ NAME 'msExchGenericForwardingAddress'
+ DESC 'msExchGenericForwardingAddress'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50823
+ NAME 'msExchHABShowInDepartments'
+ DESC 'msExchHABShowInDepartments'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51022
+ NAME 'msExchImmutableId'
+ DESC 'msExchImmutableId'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51563
+ NAME 'msExchIntendedMailboxPlanLink'
+ DESC 'msExchIntendedMailboxPlanLink'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51677
+ NAME 'msExchInterruptUserOnAuditFailure'
+ DESC 'msExchInterruptUserOnAuditFailure'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.2.593
+ NAME 'msExchLabeledURI'
+ DESC 'msExchLabeledURI'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51570
+ NAME 'msExchLicenseToken'
+ DESC 'msExchLicenseToken'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51734
+ NAME 'msExchLitigationHoldDate'
+ DESC 'msExchLitigationHoldDate'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51735
+ NAME 'msExchLitigationHoldOwner'
+ DESC 'msExchLitigationHoldOwner'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51738
+ NAME 'msExchMailboxAuditLastAdminAccess'
+ DESC 'msExchMailboxAuditLastAdminAccess'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51739
+ NAME 'msExchMailboxAuditLastDelegateAccess'
+ DESC 'msExchMailboxAuditLastDelegateAccess'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51737
+ NAME 'msExchMailboxAuditLastExternalAccess'
+ DESC 'msExchMailboxAuditLastExternalAccess'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.11091
+ NAME 'msExchMailboxFolderSet'
+ DESC 'msExchMailboxFolderSet'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51568
+ NAME 'msExchMailboxFolderSet2'
+ DESC 'msExchMailboxFolderSet2'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51402
+ NAME 'msExchMailboxMoveRemoteHostName'
+ DESC 'msExchMailboxMoveRemoteHostName'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51684
+ NAME 'msExchMailboxMoveSourceArchiveMDBLink'
+ DESC 'msExchMailboxMoveSourceArchiveMDBLink'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51439
+ NAME 'msExchMailboxMoveSourceMDBLink'
+ DESC 'msExchMailboxMoveSourceMDBLink'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51685
+ NAME 'msExchMailboxMoveTargetArchiveMDBLink'
+ DESC 'msExchMailboxMoveTargetArchiveMDBLink'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51405
+ NAME 'msExchMailboxPlanType'
+ DESC 'msExchMailboxPlanType'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50687
+ NAME 'msExchMessageHygieneFlags'
+ DESC 'msExchMessageHygieneFlags'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50779
+ NAME 'msExchMessageHygieneSCLDeleteThreshold'
+ DESC 'msExchMessageHygieneSCLDeleteThreshold'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50783
+ NAME 'msExchMessageHygieneSCLJunkThreshold'
+ DESC 'msExchMessageHygieneSCLJunkThreshold'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50781
+ NAME 'msExchMessageHygieneSCLQuarantineThreshold'
+ DESC 'msExchMessageHygieneSCLQuarantineThreshold'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50780
+ NAME 'msExchMessageHygieneSCLRejectThreshold'
+ DESC 'msExchMessageHygieneSCLRejectThreshold'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50952
+ NAME 'msExchModeratedByLink'
+ DESC 'msExchModeratedByLink'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50993
+ NAME 'msExchOWAPolicy'
+ DESC 'msExchOWAPolicy'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51569
+ NAME 'msExchObjectID'
+ DESC 'msExchObjectID'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.40
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51142
+ NAME 'msExchParentPlanLink'
+ DESC 'msExchParentPlanLink'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51644
+ NAME 'msExchPartnerGroupID'
+ DESC 'msExchPartnerGroupID'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50030
+ NAME 'msExchPolicyEnabled'
+ DESC 'msExchPolicyEnabled'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50006
+ NAME 'msExchPolicyOptionList'
+ DESC 'msExchPolicyOptionList'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.40
+  )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.93
+ NAME 'msExchPreviousAccountSid'
+ DESC 'msExchPreviousAccountSid'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.40
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50048
+ NAME 'msExchProxyCustomProxy'
+ DESC 'msExchProxyCustomProxy'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51492
+ NAME 'msExchRMSComputerAccountsLink'
+ DESC 'msExchRMSComputerAccountsLink'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.12523
+ NAME 'msExchRecipLimit'
+ DESC 'msExchRecipLimit'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51611
+ NAME 'msExchRemoteRecipientType'
+ DESC 'msExchRemoteRecipientType'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50332
+ NAME 'msExchResourceCapacity'
+ DESC 'msExchResourceCapacity'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50334
+ NAME 'msExchResourceDisplay'
+ DESC 'msExchResourceDisplay'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50333
+ NAME 'msExchResourceMetaData'
+ DESC 'msExchResourceMetaData'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50331
+ NAME 'msExchResourceSearchProperties'
+ DESC 'msExchResourceSearchProperties'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51240
+ NAME 'msExchRetentionComment'
+ DESC 'msExchRetentionComment'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51242
+ NAME 'msExchRetentionURL'
+ DESC 'msExchRetentionURL'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51150
+ NAME 'msExchSendAsAddresses'
+ DESC 'msExchSendAsAddresses'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50899
+ NAME 'msExchSenderHintTranslations'
+ DESC 'msExchSenderHintTranslations'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51624
+ NAME 'msExchSharingAnonymousIdentities'
+ DESC 'msExchSharingAnonymousIdentities'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51031
+ NAME 'msExchSharingPartnerIdentities'
+ DESC 'msExchSharingPartnerIdentities'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51266
+ NAME 'msExchSharingPolicyLink'
+ DESC 'msExchSharingPolicyLink'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50990
+ NAME 'msExchSignupAddresses'
+ DESC 'msExchSignupAddresses'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51366
+ NAME 'msExchSupervisionDLLink'
+ DESC 'msExchSupervisionDLLink'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.40
+  )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51367
+ NAME 'msExchSupervisionOneOffLink'
+ DESC 'msExchSupervisionOneOffLink'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.40
+  )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51365
+ NAME 'msExchSupervisionUserLink'
+ DESC 'msExchSupervisionUserLink'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.40
+  )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51394
+ NAME 'msExchSyncAccountsPolicyDN'
+ DESC 'msExchSyncAccountsPolicyDN'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51096
+ NAME 'msExchThrottlingPolicyDN'
+ DESC 'msExchThrottlingPolicyDN'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51612
+ NAME 'msExchUCVoiceMailSettings'
+ DESC 'msExchUCVoiceMailSettings'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51344
+ NAME 'msExchUMAddresses'
+ DESC 'msExchUMAddresses'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51145
+ NAME 'msExchUMCallingLineIDs'
+ DESC 'msExchUMCallingLineIDs'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50342
+ NAME 'msExchUMListInDirectorySearch'
+ DESC 'msExchUMListInDirectorySearch'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50388
+ NAME 'msExchUMRecipientDialPlanLink'
+ DESC 'msExchUMRecipientDialPlanLink'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.50336
+ NAME 'msExchUMSpokenName'
+ DESC 'msExchUMSpokenName'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.40
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51767
+ NAME 'msExchUsageLocation'
+ DESC 'msExchUsageLocation'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.51016
+ NAME 'msExchWindowsLiveID'
+ DESC 'msExchWindowsLiveID'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.2.468
+ NAME 'pOPCharacterSet'
+ DESC 'pOPCharacterSet'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.2.466
+ NAME 'pOPContentFormat'
+ DESC 'pOPContentFormat'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.2.223
+ NAME 'replicationSensitivity'
+ DESC 'replicationSensitivity'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.2.221
+ NAME 'unauthOrig'
+ DESC 'unauthOrig'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.44
+  )
+
+attributetype ( 1.2.840.113556.1.2.292
+ NAME 'unauthOrigBL'
+ DESC 'unauthOrigBL'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  )
+
 #---
 
 attributetype ( 1.2.840.113556.1.4.856

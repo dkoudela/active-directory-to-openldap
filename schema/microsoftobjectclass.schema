@@ -18,6 +18,13 @@ objectclass ( 1.2.840.113556.1.5.8
               operatorCount $ owner $ primaryGroupToken $ reportToOriginator $ reportToOwner $ thumbnailPhoto
             ) )
 
+objectclass ( 1.2.840.113556.1.5.15
+        NAME 'contact'
+        SUP organizationalPerson
+        STRUCTURAL 
+        MUST ( cn )
+        MAY ( msDS-SourceObjectDN $ msExchMasterAccountHistory $ msExchOriginatingForest $ notes
+            ) )
 
 #---
 
@@ -153,11 +160,31 @@ objectclass ( 666.666.666.666.666.666.5
         department $ company $ mailNickname )
     )
 
+# Fake object class simulating attributes used by 'group' entries coming from 
+# organizationalPerson
+objectclass ( 666.666.666.666.666.666.6
+    NAME 'organizationalGroup'
+    SUP inetOrgGroup
+    STRUCTURAL
+    MAY ( title $ x121Address $ registeredAddress $ destinationIndicator $
+        preferredDeliveryMethod $ telexNumber $ teletexTerminalIdentifier $
+        telephoneNumber $ internationaliSDNNumber $
+        facsimileTelephoneNumber $ street $ postOfficeBox $ postalCode $
+        postalAddress $ physicalDeliveryOfficeName $ ou $ st $ l $ c $ co $ info $ mailNickname $
+        o $ internationalISDNNumber $ givenName $ initials $ generationQualifier $
+        otherTelephone $ otherPager $ department $ company $ streetAddress $ otherHomePhone $
+        personalTitle $ homePostalAddress $ countryCode $ employeeID $ comment $ division $
+        otherFacsimileTelephoneNumber $ otherMobile $ primaryTelexNumber $
+        primaryInternationalISDNNumber $ mhsORAddress $ otherMailbox $ assistant $
+        ipPhone $ otherIpPhone $ mail $ manager $ homePhone $ mobile $ pager $ middleName $
+        thumbnailPhoto $ thumbnailLogo
+        ) )
+
 # Custom group objectclass containing all Microsoft attributes 
 # used by Active Directory group
-objectclass ( 666.666.666.666.666.666.6
+objectclass ( 666.666.666.666.666.666.7
         NAME 'customActiveDirectoryGroup'
-        SUP inetOrgGroup
+        SUP organizationalGroup
         STRUCTURAL
         MUST (objectSid $ sAMAccountName $ sAMAccountType 
              ) 
@@ -184,6 +211,53 @@ objectclass ( 666.666.666.666.666.666.6
              msExchShadowCompany $ msExchShadowDepartment $ msExchShadowTitle $ msExchShadowPhysicalDeliveryOfficeName $
              msTSExpireDate $ msTSLicenseVersion $ msTSManagingLS $ msExchShadowCountryCode $ autoReplyMessage $ msExchELCMailboxFlags $
              msExchShadowInitials $ msExchShadowMobile $ msExchModeratedObjectsBL $ msExchUserBL
+            ) )
+
+# Custom group objectclass containing all Microsoft attributes 
+# used by Active Directory contact
+objectclass ( 666.666.666.666.666.666.8
+        NAME 'customActiveDirectoryContact'
+        SUP contact
+        STRUCTURAL
+        MAY ( DUP-labeledURI-e20b3d32-5a2b-4f6c-84c0-65c94ba52437 $ DUP-secretary-00efea41-cee1-4f20-b9c3-a2a93ec60616 $
+              altRecipient $ altRecipientBL $ assistant $ authOrig $ authOrigBL $ autoReplyMessage $ company $ dLMemDefault $
+              dLMemRejectPerms $ dLMemRejectPermsBL $ dLMemSubmitPerms $ dLMemSubmitPermsBL $ delivContLength $ delivExtContTypes $
+              deliverAndRedirect $ deliveryMechanism $ department $ dnQualifier $ enabledProtocols $ expirationTime $ extensionData $
+              folderPathname $ formData $ forwardingAddress $ garbageCollPeriod $ homeMTA $ importedFrom $ info $ internetEncoding $
+              language $ languageCode $ legacyExchangeDN $ mAPIRecipient $ mail $ mailNickname $ msDS-HABSeniorityIndex $ 
+              msDS-PhoneticDisplayName $ msExchAddressBookFlags $ msExchAggregationSubscriptionCredential $ msExchArbitrationMailbox $
+              msExchAssistantName $ msExchAuditAdmin $ msExchAuditDelegate $ msExchAuditDelegateAdmin $ msExchAuditOwner $ 
+              msExchBlockedSendersHash $ msExchBypassAudit $ msExchBypassModerationBL $ msExchBypassModerationFromDLMembersBL $
+              msExchBypassModerationFromDLMembersLink $ msExchBypassModerationLink $ msExchCalculatedTargetAddress $ 
+              msExchCalendarRepairDisabled $ msExchCapabilityIdentifiers $ msExchCoManagedObjectsBL $ msExchCustomProxyAddresses $
+              msExchDirsyncID $ msExchDirsyncSourceObjectClass $ msExchEdgeSyncRetryCount $ msExchEnableModeration $
+              msExchEwsApplicationAccessPolicy $ msExchEwsEnabled $ msExchEwsExceptions $ msExchEwsWellKnownApplicationPolicies $
+              msExchExpansionServerName $ msExchExternalSyncState $ msExchFBURL $ msExchForeignGroupSID $ msExchGenericForwardingAddress $
+              msExchHABShowInDepartments $ msExchImmutableId $ msExchIntendedMailboxPlanLink $ msExchInterruptUserOnAuditFailure $
+              msExchLabeledURI $ msExchLicenseToken $ msExchLitigationHoldDate $ msExchLitigationHoldOwner $ msExchMailboxAuditEnable $
+              msExchMailboxAuditLastAdminAccess $ msExchMailboxAuditLastDelegateAccess $ msExchMailboxAuditLastExternalAccess $
+              msExchMailboxAuditLogAgeLimit $ msExchMailboxFolderSet $ msExchMailboxFolderSet2 $ msExchMailboxMoveBatchName $
+              msExchMailboxMoveFlags $ msExchMailboxMoveRemoteHostName $ msExchMailboxMoveSourceArchiveMDBLink $
+              msExchMailboxMoveSourceMDBLink $ msExchMailboxMoveStatus $ msExchMailboxMoveTargetArchiveMDBLink $
+              msExchMailboxMoveTargetMDBLink $ msExchMailboxPlanType $ msExchMailboxSecurityDescriptor $ msExchMasterAccountSid $
+              msExchMessageHygieneFlags $ msExchMessageHygieneSCLDeleteThreshold $ msExchMessageHygieneSCLJunkThreshold $
+              msExchMessageHygieneSCLQuarantineThreshold $ msExchMessageHygieneSCLRejectThreshold $ msExchModeratedByLink $
+              msExchModeratedObjectsBL $ msExchModerationFlags $ msExchOWAPolicy $ msExchObjectID $ msExchParentPlanLink $
+              msExchPartnerGroupID $ msExchPoliciesExcluded $ msExchPoliciesIncluded $ msExchPolicyEnabled $ msExchPolicyOptionList $
+              msExchPreviousAccountSid $ msExchProvisioningFlags $ msExchProxyCustomProxy $ msExchRBACPolicyLink $ 
+              msExchRMSComputerAccountsLink $ msExchRecipLimit $ msExchRecipientDisplayType $ msExchRecipientTypeDetails $
+              msExchRemoteRecipientType $ msExchRequireAuthToSendTo $ msExchResourceCapacity $ msExchResourceDisplay $
+              msExchResourceMetaData $ msExchResourceSearchProperties $ msExchRetentionComment $ msExchRetentionURL $
+              msExchSafeRecipientsHash $ msExchSafeSendersHash $ msExchSendAsAddresses $ msExchSenderHintTranslations $
+              msExchSharingAnonymousIdentities $ msExchSharingPartnerIdentities $ msExchSharingPolicyLink $ msExchSignupAddresses $
+              msExchSupervisionDLLink $ msExchSupervisionOneOffLink $ msExchSupervisionUserLink $ msExchSyncAccountsPolicyDN $
+              msExchTextMessagingState $ msExchThrottlingPolicyDN $ msExchTransportRecipientSettingsFlags $ msExchUCVoiceMailSettings $
+              msExchUMAddresses $ msExchUMCallingLineIDs $ msExchUMDtmfMap $ msExchUMListInDirectorySearch $ msExchUMRecipientDialPlanLink $
+              msExchUMSpokenName $ msExchUsageLocation $ msExchUserAccountControl $ msExchWhenMailboxCreated $ msExchWindowsLiveID $
+              pOPCharacterSet $ pOPContentFormat $ protocolSettings $ publicDelegates $ publicDelegatesBL $ replicationSensitivity $
+              securityProtocol $ showInAddressBook $ submissionContLength $ targetAddress $ telephoneNumber $ textEncodedORAddress $
+              unauthOrig $ unauthOrigBL $ userCert $ userCertificate $ userSMIMECertificate $ versionNumber $
+              msExchVersion
             ) )
 
 
