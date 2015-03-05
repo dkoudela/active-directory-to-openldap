@@ -2753,6 +2753,8 @@ attributetype ( 1.2.840.113556.1.4.657
 
 attributetype ( 1.2.840.113556.1.4.782
         NAME 'objectCategory'
+        EQUALITY distinguishedNameMatch
+        SUBSTR caseIgnoreSubstringsMatch
         SYNTAX '1.3.6.1.4.1.1466.115.121.1.12'
         SINGLE-VALUE )
 
@@ -2768,6 +2770,8 @@ attributetype ( 1.2.840.113556.1.4.720
 
 attributetype ( 1.2.840.113556.1.4.221
 	NAME 'sAMAccountName'
+    EQUALITY caseIgnoreMatch
+    SUBSTR caseIgnoreSubstringsMatch
 	SYNTAX '1.3.6.1.4.1.1466.115.121.1.15'
 	SINGLE-VALUE )
 
