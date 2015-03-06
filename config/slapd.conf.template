@@ -54,7 +54,7 @@ argsfile	/var/run/openldap/slapd.args
 # moduleload ppolicy.la
 # moduleload refint.la
 # moduleload retcode.la
-# moduleload rwm.la
+moduleload rwm.la
 # moduleload seqmod.la
 # moduleload smbk5pwd.la
 # moduleload sssvlv.la
@@ -114,10 +114,31 @@ access to *
 #######################################################################
 # database definitions
 #######################################################################
-database        config
+
+#######################################################################
+# Meta backend providing rewrite of MS non-standard LDAP Search queries
+#######################################################################
+database        meta
+suffix          "dc=sub,dc=example,dc=com"
+uri             "ldap://0.0.0.0/dc=sub,dc=example,dc=com"
+suffixmassage   "dc=sub,dc=example,dc=com" "dc=example,dc=com"
+acl-authcDN     "cn=Manager,dc=example,dc=com"
+acl-passwd      secret
+rebind-as-user
+rewriteEngine   on
+rewriteContext  searchFilter
+rewriteRule     "(.*)objectCategory=[a-zA-Z]+(.*)" "%1objectCategory=cn=Person*%2" ":"
+
+#######################################################################
+# Configuration backend providing config and schema settings
+#######################################################################
+database	config
 rootdn		"cn=config"
 rootpw		secret
 
+#######################################################################
+# Database backend containing the LDAP data
+#######################################################################
 database	bdb
 suffix		"dc=example,dc=com"
 checkpoint	1024 15

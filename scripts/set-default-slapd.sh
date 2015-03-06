@@ -11,7 +11,7 @@ PASSWDFILE=${D}/passwdfile.conf
 
 # Generate config files from templates
 source ${SLAPDENV}
-sed "s/dc=example,dc=com/$ROOTDN/g;s|__SCHEMADIR__|$SCHEMADIR|g;s/^rootpw.*$/rootpw	$ROOTPW/g" ${SLAPDCONFTEMPLATE} >${SLAPDCONF}
+sed "s/dc=example,dc=com/$ROOTDN/g;s|__SCHEMADIR__|$SCHEMADIR|g;s/^rootpw.*$/rootpw	$ROOTPW/g;s/^acl-passwd.*$/acl-passwd $ROOTPW/g" ${SLAPDCONFTEMPLATE} >${SLAPDCONF}
 printf "${ROOTPW}" > ${PASSWDFILE}
 
 DATABASEDIR=`sed -n 's/^directory[ \t]*\(.*\)/\1/p' ${SLAPDCONF} `
