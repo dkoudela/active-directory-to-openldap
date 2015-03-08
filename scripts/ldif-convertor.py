@@ -73,6 +73,6 @@ if __name__ == '__main__':
     parser.add_argument('--dst', metavar='DESTINATION', help='Destination ldif')
     args = parser.parse_args()
 
-    parser = ActiveDirectoryToOpenLdapLDIFConvertor(open(args.src, 'rb'), open(args.dst, 'wb'))
-    parser.parse()
+    adparser = ActiveDirectoryToOpenLdapLDIFConvertor(open(args.src, 'rb'), open(args.dst, 'wb'))
+    adparser.parse()
 
