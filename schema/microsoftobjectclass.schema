@@ -122,7 +122,8 @@ objectclass ( 666.666.666.666.666.666.2
              msTSExpireDate $ msTSLicenseVersion $ msTSManagingLS $ msExchShadowCountryCode $ autoReplyMessage $ msExchELCMailboxFlags $
              msExchShadowInitials $ msExchShadowMobile $ msExchModeratedObjectsBL $ msExchUserBL $ msExchMailboxTemplateLink $
              msExchIMACL $ msExchIMAddress $ msExchIMMetaPhysicalURL $ msExchIMPhysicalURL $ msExchIMVirtualServer $
-             msExchMobileMailboxPolicyLink $ msExchMailboxMoveSourceMDBLink $ apple-mcxsettings
+             msExchMobileMailboxPolicyLink $ msExchMailboxMoveSourceMDBLink $ apple-mcxsettings $ msExchResourceDisplay $
+             msExchResourceMetaData $ msExchResourceSearchProperties
             ) )
 
 # Support for ExchangeActiveSyncDevices entries (sub-entry of customActiveDirectoryUser/user)
@@ -212,7 +213,9 @@ objectclass ( 666.666.666.666.666.666.7
              msExchShadowDisplayName $ msExchShadowSn $ deliverAndRedirect $ msExchDelegateListLink $ deletedItemFlags $
              msExchShadowCompany $ msExchShadowDepartment $ msExchShadowTitle $ msExchShadowPhysicalDeliveryOfficeName $
              msTSExpireDate $ msTSLicenseVersion $ msTSManagingLS $ msExchShadowCountryCode $ autoReplyMessage $ msExchELCMailboxFlags $
-             msExchShadowInitials $ msExchShadowMobile $ msExchModeratedObjectsBL $ msExchUserBL
+             msExchShadowInitials $ msExchShadowMobile $ msExchModeratedObjectsBL $ msExchUserBL $ dLMemSubmitPerms $ authOrig $
+             dLMemSubmitPermsBL $ msExchBypassModerationLink $ msExchEnableModeration $ msExchModeratedByLink $ msExchSenderHintTranslations $
+             msExchExpansionServerName $ unmergedAtts
             ) )
 
 # Custom group objectclass containing all Microsoft attributes 

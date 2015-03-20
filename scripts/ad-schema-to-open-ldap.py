@@ -15,7 +15,7 @@ class OpenLdapSchemaWriter:
         '2.5.5.4'  : '1.3.6.1.4.1.1466.115.121.1.44', # Case-ignore string (teletex) -> Printable String
         '2.5.5.5'  : '1.3.6.1.4.1.1466.115.121.1.15', # Printable String -> Directory String
         '2.5.5.6'  : '1.3.6.1.4.1.1466.115.121.1.36', # Numeric String
-        '2.5.5.7'  : '1.3.6.1.4.1.1466.115.121.1.44', # OR Name -> Printable String
+        '2.5.5.7'  : '1.3.6.1.4.1.1466.115.121.1.15', # OR Name -> Directory String
         '2.5.5.8'  : '1.3.6.1.4.1.1466.115.121.1.7',  # Boolean
         '2.5.5.9'  : '1.3.6.1.4.1.1466.115.121.1.27', # INTEGER
         '2.5.5.10' : '1.3.6.1.4.1.1466.115.121.1.40', # Octet String
