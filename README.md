@@ -12,7 +12,7 @@ Imagine the following situation:
   * License costs
   * Not having full admin access to the Active Directory
 * You need just:
-  * Authenticate against the LDAP service
+  * Authenticate the users against the LDAP service
   * Synchronize the user profiles with your user services
 
 In this case, this project is suitable for you.
