@@ -5,7 +5,7 @@ A successful attempt to provide tools and schemas for conversion of Active Direc
 User services like Jenkins, Confluence or Upsource are usually integrated with an LDAP service in corporate environments.
 
 
-Imagine situation:
+Imagine the following situation:
 * You have an Active Directory instance with the production data
 * You would like to have a second LDAP instance with full data access
 * You cannot use an additional Active Directory instance for some reason, like:
