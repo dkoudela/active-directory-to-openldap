@@ -1,3 +1,11 @@
+objectclass ( 1.2.840.113556.1.3.23
+ NAME 'container'
+ SUP 'top'
+ STRUCTURAL
+ MUST ( cn )
+ MAY ( schemaVersion $ defaultClassStore )
+ )
+
 objectclass ( 1.2.840.113556.1.5.67
         NAME 'domainDNS'
         SUP domain
@@ -262,7 +270,8 @@ objectclass ( 666.666.666.666.666.666.8
               pOPCharacterSet $ pOPContentFormat $ protocolSettings $ publicDelegates $ publicDelegatesBL $ replicationSensitivity $
               securityProtocol $ showInAddressBook $ submissionContLength $ targetAddress $ telephoneNumber $ textEncodedORAddress $
               unauthOrig $ unauthOrigBL $ userCert $ userCertificate $ userSMIMECertificate $ versionNumber $
-              msExchVersion
+              msExchVersion $ msExchALObjectVersion $ msExchHideFromAddressLists $ msExchADCGlobalNames $ replicatedObjectVersion $
+              replicationSignature
             ) )
 
 
