@@ -1506,6 +1506,246 @@ attributetype ( 1.2.840.113556.1.4.7000.102.48
  SYNTAX 1.3.6.1.4.1.1466.115.121.1.40
  SINGLE-VALUE )
 
+attributetype ( 1.2.840.113556.1.4.7000.102.50666
+ NAME 'msExchMobileAllowedDeviceIDs'
+ DESC 'msExchMobileAllowedDeviceIDs'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  )
+
+attributetype ( 1.2.840.113556.1.2.348
+ NAME 'logRolloverInterval'
+ DESC 'logRolloverInterval'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  )
+
+attributetype ( 1.2.840.113556.1.2.198
+ NAME 'monitoredConfigurations'
+ DESC 'monitoredConfigurations'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  )
+
+attributetype ( 1.2.840.113556.1.2.199
+ NAME 'monitoredServices'
+ DESC 'monitoredServices'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  )
+
+attributetype ( 1.2.840.113556.1.2.450
+ NAME 'monitoringAvailabilityStyle'
+ DESC 'monitoringAvailabilityStyle'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.2.200
+ NAME 'monitoringAvailabilityWindow'
+ DESC 'monitoringAvailabilityWindow'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.40
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.2.196
+ NAME 'monitoringCachedViaMail'
+ DESC 'monitoringCachedViaMail'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  )
+
+attributetype ( 1.2.840.113556.1.2.197
+ NAME 'monitoringCachedViaRPC'
+ DESC 'monitoringCachedViaRPC'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  )
+
+attributetype ( 1.2.840.113556.1.2.195
+ NAME 'monitoringMailUpdateInterval'
+ DESC 'monitoringMailUpdateInterval'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.2.93
+ NAME 'monitoringMailUpdateUnits'
+ DESC 'monitoringMailUpdateUnits'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.2.92
+ NAME 'monitoringRPCUpdateInterval'
+ DESC 'monitoringRPCUpdateInterval'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.2.89
+ NAME 'monitoringRPCUpdateUnits'
+ DESC 'monitoringRPCUpdateUnits'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.1717
+ NAME 'msDS-AdditionalDnsHostName'
+ DESC 'msDS-AdditionalDnsHostName'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  )
+
+attributetype ( 1.2.840.113556.1.4.1718
+ NAME 'msDS-AdditionalSamAccountName'
+ DESC 'msDS-AdditionalSamAccountName'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  )
+
+attributetype ( 1.2.840.113556.1.4.1958
+ NAME 'msDS-AuthenticatedAtDC'
+ DESC 'msDS-AuthenticatedAtDC'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  )
+
+attributetype ( 1.2.840.113556.1.4.1783
+ NAME 'msDS-ExecuteScriptPassword'
+ DESC 'msDS-ExecuteScriptPassword'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.40
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.2056
+ NAME 'msDS-HostServiceAccount'
+ DESC 'msDS-HostServiceAccount'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  )
+
+attributetype ( 1.2.840.113556.1.4.2025
+ NAME 'msDS-IsUserCachableAtRodc'
+ DESC 'msDS-IsUserCachableAtRodc'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.1923
+ NAME 'msDS-KrbTgtLink'
+ DESC 'msDS-KrbTgtLink'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.1926
+ NAME 'msDS-NeverRevealGroup'
+ DESC 'msDS-NeverRevealGroup'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  )
+
+attributetype ( 1.2.840.113556.1.4.1962
+ NAME 'msDS-PromotionSettings'
+ DESC 'msDS-PromotionSettings'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.1928
+ NAME 'msDS-RevealOnDemandGroup'
+ DESC 'msDS-RevealOnDemandGroup'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  )
+
+attributetype ( 1.2.840.113556.1.4.1940
+ NAME 'msDS-RevealedList'
+ DESC 'msDS-RevealedList'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.40
+  )
+
+attributetype ( 1.2.840.113556.1.4.1924
+ NAME 'msDS-RevealedUsers'
+ DESC 'msDS-RevealedUsers'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  )
+
+attributetype ( 1.2.840.113556.1.4.1961
+ NAME 'msDS-SiteName'
+ DESC 'msDS-SiteName'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.1959
+ NAME 'msDS-isGC'
+ DESC 'msDS-isGC'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.1960
+ NAME 'msDS-isRODC'
+ DESC 'msDS-isRODC'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.7000.102.71
+ NAME 'msExchExchangeServerLink'
+ DESC 'msExchExchangeServerLink'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.6.18.1.323
+ NAME 'msSFU30Aliases'
+ DESC 'msSFU30Aliases'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  )
+
+attributetype ( 1.2.840.113556.1.4.1966
+ NAME 'msTPM-OwnerInformation'
+ DESC 'msTPM-OwnerInformation'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.2070
+ NAME 'msTSEndpointData'
+ DESC 'msTSEndpointData'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.2072
+ NAME 'msTSEndpointPlugin'
+ DESC 'msTSEndpointPlugin'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.2071
+ NAME 'msTSEndpointType'
+ DESC 'msTSEndpointType'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.4.2074
+ NAME 'msTSPrimaryDesktopBL'
+ DESC 'msTSPrimaryDesktopBL'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  )
+
+attributetype ( 1.2.840.113556.1.4.1991
+ NAME 'msTSProperty01'
+ DESC 'msTSProperty01'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  )
+
+attributetype ( 1.2.840.113556.1.4.1992
+ NAME 'msTSProperty02'
+ DESC 'msTSProperty02'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  )
+
+attributetype ( 1.2.840.113556.1.4.2078
+ NAME 'msTSSecondaryDesktopBL'
+ DESC 'msTSSecondaryDesktopBL'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  )
+
+attributetype ( 1.2.840.113556.1.2.540
+ NAME 'promoExpiration'
+ DESC 'promoExpiration'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.2.347
+ NAME 'trackingLogPathName'
+ DESC 'trackingLogPathName'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
+attributetype ( 1.2.840.113556.1.2.573
+ NAME 'type'
+ DESC 'type'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ SINGLE-VALUE )
+
 #---
 
 attributetype ( 1.2.840.113556.1.4.856

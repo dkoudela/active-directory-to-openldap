@@ -131,7 +131,8 @@ objectclass ( 666.666.666.666.666.666.2
              msExchShadowInitials $ msExchShadowMobile $ msExchModeratedObjectsBL $ msExchUserBL $ msExchMailboxTemplateLink $
              msExchIMACL $ msExchIMAddress $ msExchIMMetaPhysicalURL $ msExchIMPhysicalURL $ msExchIMVirtualServer $
              msExchMobileMailboxPolicyLink $ msExchMailboxMoveSourceMDBLink $ apple-mcxsettings $ msExchResourceDisplay $
-             msExchResourceMetaData $ msExchResourceSearchProperties
+             msExchResourceMetaData $ msExchResourceSearchProperties $ msExchRemoteRecipientType $ targetAddress $ 
+             msExchMailboxMoveRemoteHostName $ msExchMobileAllowedDeviceIDs $ msExchSharingPartnerIdentities
             ) )
 
 # Support for ExchangeActiveSyncDevices entries (sub-entry of customActiveDirectoryUser/user)
@@ -272,6 +273,26 @@ objectclass ( 666.666.666.666.666.666.8
               unauthOrig $ unauthOrigBL $ userCert $ userCertificate $ userSMIMECertificate $ versionNumber $
               msExchVersion $ msExchALObjectVersion $ msExchHideFromAddressLists $ msExchADCGlobalNames $ replicatedObjectVersion $
               replicationSignature
+            ) )
+
+# Custom computer objectclass representing computer account 
+objectclass ( 1.2.840.113556.1.3.30
+        NAME 'computer'
+        SUP customActiveDirectoryUser
+        STRUCTURAL
+        MAY ( catalogs $ cn $ dNSHostName $ defaultLocalPolicyObject $ localPolicyFlags $ location $ logRolloverInterval $ 
+              machineRole $ managedBy $ monitoredConfigurations $ monitoredServices $ monitoringAvailabilityStyle $ 
+              monitoringAvailabilityWindow $ monitoringCachedViaMail $ monitoringCachedViaRPC $ monitoringMailUpdateInterval $ 
+              monitoringMailUpdateUnits $ monitoringRPCUpdateInterval $ monitoringRPCUpdateUnits $ msDS-AdditionalDnsHostName $ 
+              msDS-AdditionalSamAccountName $ msDS-AuthenticatedAtDC $ msDS-ExecuteScriptPassword $ msDS-HostServiceAccount $ 
+              msDS-IsUserCachableAtRodc $ msDS-KrbTgtLink $ msDS-NeverRevealGroup $ msDS-PromotionSettings $ msDS-RevealOnDemandGroup $ 
+              msDS-RevealedList $ msDS-RevealedUsers $ msDS-SiteName $ msDS-isGC $ msDS-isRODC $ msExchExchangeServerLink $ 
+              msExchPolicyList $ msExchPolicyOptionList $ msSFU30Aliases $ msSFU30Name $ msSFU30NisDomain $ msTPM-OwnerInformation $ 
+              msTSEndpointData $ msTSEndpointPlugin $ msTSEndpointType $ msTSPrimaryDesktopBL $ msTSProperty01 $ msTSProperty02 $ 
+              msTSSecondaryDesktopBL $ netbootGUID $ netbootInitialization $ netbootMachineFilePath $ netbootMirrorDataFile $ 
+              netbootSIFFile $ networkAddress $ nisMapName $ operatingSystem $ operatingSystemHotfix $ operatingSystemServicePack $ 
+              operatingSystemVersion $ physicalLocationObject $ policyReplicationFlags $ promoExpiration $ rIDSetReferences $ 
+              securityProtocol $ siteGUID $ trackingLogPathName $ type $ volumeCount
             ) )
 
 
