@@ -2,9 +2,13 @@ dn: dc=example,dc=com
 objectClass: top
 objectClass: domain
 objectClass: domainDNS
+instanceType: 5
+objectCategory: CN=Domain-DNS,CN=Schema,CN=Configuration,DC=example,DC=com
 
 dn: ou=My Company Users,dc=example,dc=com
 objectClass: top
 objectClass: organizationalUnit
 ou: My Company Users 
+instanceType: 4
+objectCategory: CN=Organizational-Unit,CN=Schema,CN=Configuration,DC=example,DC=com
 
