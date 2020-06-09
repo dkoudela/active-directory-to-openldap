@@ -20,8 +20,11 @@ In this case, this project is suitable for you.
 ## Prerequisites
 * Installed:
   * openldap-2.4.40
+  * openldap-servers-sql-2.4.40
   * openldap-clients-2.4.40
+  * openldap-devel-2.4.40
   * python-ldap-2.3.10
+  * openldap-servers-2.4.40
 
 ## Content
 ### config directory
