@@ -19,8 +19,8 @@ In this case, this project is suitable for you.
 
 ## Prerequisites
 * Installed:
-  * openldap-2.4.39
-  * openldap-clients-2.4.39
+  * openldap-2.4.40
+  * openldap-clients-2.4.40
   * python-ldap-2.3.10
 
 ## Content
