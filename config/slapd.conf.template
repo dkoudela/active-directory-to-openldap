@@ -35,12 +35,14 @@ argsfile	/var/run/openldap/slapd.args
 # - back_sql.la overlay requires openldap-server-sql package
 # - dyngroup.la and dynlist.la cannot be used at the same time
 
-# modulepath /usr/lib/openldap
-# modulepath /usr/lib64/openldap
+modulepath /usr/lib/openldap
+modulepath /usr/lib64/openldap
 
 # moduleload accesslog.la
 # moduleload auditlog.la
 # moduleload back_sql.la
+moduleload back_ldap.la
+moduleload back_meta.la
 # moduleload chain.la
 # moduleload collect.la
 # moduleload constraint.la
