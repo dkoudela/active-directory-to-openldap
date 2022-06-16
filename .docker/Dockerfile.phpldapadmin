@@ -1,0 +1,33 @@
+FROM php:7.4-apache
+
+RUN curl -L -k https://github.com/leenooks/phpLDAPadmin/archive/refs/heads/master.zip -o /tmp/phpldapadmin.zip
+
+RUN apt-get update && apt-get install -y unzip libldap2-dev
+
+RUN docker-php-ext-install ldap gettext
+
+# For PLA v2
+# RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
+#     && php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;" \
+#     && php composer-setup.php \
+#     && php -r "unlink('composer-setup.php');" \
+#     && mv composer.phar /usr/local/bin/composer
+
+RUN unzip /tmp/phpldapadmin.zip -d /tmp \
+    && rm -rf /var/www/html \
+    && mv /tmp/phpLDAPadmin-master /var/www/html
+
+# For PLA v2
+# RUN cd /var/www/html \
+#     && composer install
+
+ENV LDAP_HOST=ldap
+ENV LDAP_PORT=389
+ENV LDAP_BASE_DN=dc=example,dc=com
+ENV LDAP_BIND_ID=cn=Manager,dc=example,dc=com
+ENV LDAP_BIND_PASSWORD=secrets
+
+COPY .docker/set-phpLDAPadmin-config.sh /usr/local/bin/set-phpLDAPadmin-config
+
+RUN chmod +x /usr/local/bin/set-phpLDAPadmin-config \
+    && sed -i '/^set -e/a /usr/local/bin/set-phpLDAPadmin-config' /usr/local/bin/docker-php-entrypoint

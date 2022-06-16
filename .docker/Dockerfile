@@ -13,7 +13,11 @@ RUN yum install -y \
 # secondary reqs
 RUN yum install -y \
     which \
-    psmisc \sudo
+    psmisc \
+    sudo \
+    krb5-server-ldap \
+    krb5-workstation \
+    cyrus-sasl-gssapi
 
 # systemctl replacement
 RUN curl -L https://raw.githubusercontent.com/gdraheim/docker-systemctl-replacement/master/files/docker/systemctl.py -o /bin/systemctl
@@ -25,6 +29,8 @@ COPY ./ /app
 RUN mv /app/.docker/entrypoint.sh /app/entrypoint.sh \
     && chmod +x /app/entrypoint.sh \
     && rm -rf /app/.docker
+
+RUN echo "local4.debug		/var/log/slapd.log" >> /etc/syslog.conf
 
 WORKDIR /app
 

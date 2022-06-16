@@ -3,6 +3,8 @@
 # This file should NOT be world readable.
 #
 
+loglevel -1
+
 include		__SCHEMADIR__/microsoftattributetype.schema
 include		__SCHEMADIR__/microsoftattributetypestd.schema
 include		__SCHEMADIR__/corba.schema
