@@ -1,0 +1,25 @@
+version: "3.3"
+   
+services:
+  ldap:
+    image: stevenlafl/ad2openldap
+    volumes:
+      - ./ldif:/app/ldif
+      - ./schema:/app/schema
+    ports:
+      - "389:389"
+      - "636:636"
+  phpldapadmin:
+    image: stevenlafl/phpldapadmin
+    environment:
+      LDAP_HOST: ldap
+      LDAP_PORT: 389
+      LDAP_BASE_DN: dc=example,dc=com
+      LDAP_BIND_ID: cn=Manager,dc=example,dc=com
+      LDAP_BIND_PASSWORD: secrets
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - ldap
+

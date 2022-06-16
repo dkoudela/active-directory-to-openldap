@@ -4,7 +4,6 @@ A successful attempt to provide tools and schemas for conversion of Active Direc
 ## Motivation
 User services like Jenkins, Confluence or Upsource are usually integrated with an LDAP service in corporate environments.
 
-
 Imagine the following situation:
 * You have an Active Directory instance with the production data
 * You would like to have a second LDAP instance with full data access
@@ -19,12 +18,12 @@ In this case, this project is suitable for you.
 
 ## Prerequisites
 * Installed:
-  * openldap-2.4.40
-  * openldap-servers-sql-2.4.40
-  * openldap-clients-2.4.40
-  * openldap-devel-2.4.40
-  * python-ldap-2.3.10
-  * openldap-servers-2.4.40
+  * openldap-2.4.44
+  * openldap-servers-sql-2.4.44
+  * openldap-clients-2.4.44
+  * openldap-devel-2.4.44
+  * python-ldap-2.4.15
+  * openldap-servers-2.4.44
 
 ## Content
 ### config directory
